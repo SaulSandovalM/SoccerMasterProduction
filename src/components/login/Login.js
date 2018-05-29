@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, ImageBackground, Image, Alert} from 'react-native';
 import {Form, Item, Input, Label, Button} from 'native-base';
 import {NavigationActions} from 'react-navigation';
-import fondo from '../../assets/imgs/fondo.jpg';
+import fondo from '../../assets/imgs/pasto.jpg';
 import icon from '../../assets/imgs/icon.png';
 import firebase from '../firebase/firebase';
 

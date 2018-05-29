@@ -7,7 +7,7 @@ import React from 'react';
 import {StyleSheet, View, Text, Alert, ImageBackground} from 'react-native';
 import {Form, Item, Input, Label, Button} from 'native-base';
 import firebase from '../firebase/firebase';
-import fondo from '../../assets/imgs/fondo.jpg';
+import fondo from '../../assets/imgs/pasto.jpg';
 
 export default class Registro extends React.Component {
     static navigationOptions = {
