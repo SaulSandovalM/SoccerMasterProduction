@@ -28,6 +28,7 @@ export default class Home extends Component{
 
   render() {
     return (
+      <Container>
       <ImageBackground source={img3} style={styles.viewPager}>
         <Content>
 
@@ -95,9 +96,10 @@ export default class Home extends Component{
             </Button>
           </FooterTab>
         </Footer>
-        
+
         </Content>
       </ImageBackground>
+      </Container>
     );
   }
 }
