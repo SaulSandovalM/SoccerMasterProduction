@@ -76,29 +76,29 @@ export default class Home extends Component{
           </View>
         </View>
 
-        <Footer>
-          <FooterTab>
-            <Button vertical>
-              <Icon name="apps" />
-              <Text>Apps</Text>
-            </Button>
-            <Button vertical>
-              <Icon name="camera" />
-              <Text>Camera</Text>
-            </Button>
-            <Button vertical active>
-              <Icon active name="navigate" />
-              <Text>Navigate</Text>
-            </Button>
-            <Button vertical>
-              <Icon name="person" />
-              <Text>Contact</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
-
         </Content>
       </ImageBackground>
+
+      <Footer>
+        <FooterTab>
+          <Button vertical>
+            <Icon name="apps" />
+            <Text>Apps</Text>
+          </Button>
+          <Button vertical>
+            <Icon name="camera" />
+            <Text>Camera</Text>
+          </Button>
+          <Button vertical active>
+            <Icon active name="navigate" />
+            <Text>Navigate</Text>
+          </Button>
+          <Button vertical>
+            <Icon name="person" />
+            <Text>Contact</Text>
+          </Button>
+        </FooterTab>
+      </Footer>
       </Container>
     );
   }
