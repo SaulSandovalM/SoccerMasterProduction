@@ -21,7 +21,7 @@ export default class Home extends Component{
       <Container>
       <ImageBackground source={img3} style={styles.viewPager}>
 
-        <Header />
+        <Header hasTabs />
 
         <Tabs initialPage={1}>
           <Tab heading="Inicio">

@@ -120,6 +120,5 @@ const styles = StyleSheet.create({
   view2: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 85
   }
 });
