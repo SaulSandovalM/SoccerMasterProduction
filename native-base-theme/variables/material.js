@@ -237,7 +237,7 @@ export default {
   inverseSpinnerColor: "#1A191B",
 
   // Tabs
-  tabBgColor: "#F8F8F8",
+  tabBgColor: "#94c552",
   tabFontSize: 15,
   tabTextColor: "#222222",
 
