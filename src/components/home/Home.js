@@ -5,34 +5,23 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-native';
-import {Container, Content, Tab, Tabs} from 'native-base';
+import {Container, Content, Tab, Tabs, Header} from 'native-base';
 import img3 from '../../assets/imgs/pasto.jpg';
 import Index from './Index';
 import Stadistics from '../stadistics/Stadistics';
 import Market from '../market/MarketTeam';
 
 export default class Home extends Component{
-  static navigationOptions = ({ navigation }) => {
-    const params = navigation.state.params || {};
-
-    return {
-      headerStyle: {
-        backgroundColor: 'transparent',
-        right: 0,
-        left: 0,
-        top: 0,
-        position: 'absolute',
-        borderBottomWidth: 0,
-      },
-        headerLeft: null,
-        headerTitle: "Inicio",
-    };
+  static navigationOptions = {
+      header: null
   };
 
   render() {
     return (
       <Container>
       <ImageBackground source={img3} style={styles.viewPager}>
+
+        <Header />
 
         <Tabs initialPage={1}>
           <Tab heading="Inicio">

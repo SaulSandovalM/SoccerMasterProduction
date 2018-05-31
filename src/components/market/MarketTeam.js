@@ -9,23 +9,9 @@ import {List, ListItem, Thumbnail, Body} from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class MarketTeam extends Component{
-  static navigationOptions = ({ navigation }) => {
-        const params = navigation.state.params || {};
-
-        return {
-            headerStyle: {
-                backgroundColor: 'transparent',
-                right: 0,
-                left: 0,
-                top: 0,
-                position: 'absolute',
-                borderBottomWidth: 0,            },
-            headerLeft: (
-                <Icon name="reply" style={{fontSize: 30, marginLeft: 5}} onPress={() => navigation.push('Home')} color="yellow" />
-            ),
-            headerTitle: "MERCADO",
-        };
-    };
+  static navigationOptions = {
+      header: null
+  };
 
     render() {
       return (
@@ -82,7 +68,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'blue',
-    marginTop: 85
   },
   container2: {
     flexDirection: 'row',

@@ -6,26 +6,13 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-native';
 import {Container, Content, Tab, Tabs, Button, Icon} from 'native-base';
-import img3 from '../../assets/imgs/pasto.jpg';
+import img3 from '../../assets/imgs/cancha.jpg';
 import Stadistics from '../stadistics/Stadistics';
 import Market from '../market/Market';
 
 export default class Index extends Component{
-  static navigationOptions = ({ navigation }) => {
-    const params = navigation.state.params || {};
-
-    return {
-      headerStyle: {
-        backgroundColor: 'transparent',
-        right: 0,
-        left: 0,
-        top: 0,
-        position: 'absolute',
-        borderBottomWidth: 0,
-      },
-        headerLeft: null,
-        headerTitle: "Inicio",
-    };
+  static navigationOptions = {
+      header: null
   };
 
   render() {
