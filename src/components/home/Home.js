@@ -9,7 +9,7 @@ import {Container, Content, Tab, Tabs} from 'native-base';
 import img3 from '../../assets/imgs/pasto.jpg';
 import Index from './Index';
 import Stadistics from '../stadistics/Stadistics';
-import Market from '../market/Market';
+import Market from '../market/MarketTeam';
 
 export default class Home extends Component{
   static navigationOptions = ({ navigation }) => {

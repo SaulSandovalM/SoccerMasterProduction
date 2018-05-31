@@ -5,7 +5,7 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-native';
-import {Container, Content, Footer, FooterTab, Button, Icon} from 'native-base';
+import {Container, Content, Tab, Tabs, Button, Icon} from 'native-base';
 import img3 from '../../assets/imgs/pasto.jpg';
 import Stadistics from '../stadistics/Stadistics';
 import Market from '../market/Market';
@@ -32,18 +32,6 @@ export default class Index extends Component{
     return (
       <Container>
       <ImageBackground source={img3} style={styles.viewPager}>
-
-        <Tabs initialPage={1}>
-          <Tab heading="Inicio">
-            <Index />
-          </Tab>
-          <Tab heading="Estadisticas">
-            <Stadistics />
-          </Tab>
-          <Tab heading="Mercado">
-            <Market />
-          </Tab>
-        </Tabs>
 
         <Content>
 

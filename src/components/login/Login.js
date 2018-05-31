@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
   },
   viewPager: {
     flex: 1,
-    marginTop: 24
   },
   backgroundVideo: {
     position: 'absolute',
