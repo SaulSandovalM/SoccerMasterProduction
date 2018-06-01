@@ -8,7 +8,7 @@ import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-
 import {Container, Content, Tab, Tabs, Button, Icon} from 'native-base';
 import img3 from '../../assets/imgs/cancha.jpg';
 import Stadistics from '../stadistics/Stadistics';
-import Market from '../market/Market';
+import Market from '../market/MarketTeam';
 
 export default class Index extends Component{
   static navigationOptions = {
