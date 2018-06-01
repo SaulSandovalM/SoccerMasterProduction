@@ -67,7 +67,6 @@ export default class MarketTeam extends Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
   },
   container2: {
     flexDirection: 'row',

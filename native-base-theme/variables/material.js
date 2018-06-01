@@ -142,7 +142,7 @@ export default {
   tabActiveBgColor: undefined,
 
   // Tab
-  tabDefaultBg: "white",
+  tabDefaultBg: "#94c552",
   topTabBarTextColor: "rgb(102,165,138)",
   topTabBarActiveTextColor: "rgb(102,165,138)",
   topTabActiveBgColor: "rgb(102,165,138)",
