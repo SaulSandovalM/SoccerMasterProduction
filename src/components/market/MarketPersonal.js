@@ -4,25 +4,13 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image, ViewPagerAndroid} from 'react-native';
+import {StyleSheet, Text, View, Image, ViewPagerAndroid, ImageBackground} from 'react-native';
+import img1 from '../../assets/imgs/balones.jpg';
 
 export default class MarketPersonal extends Component{
-  static navigationOptions = ({ navigation }) => {
-        const params = navigation.state.params || {};
-
-        return {
-            headerStyle: {
-                backgroundColor: 'transparent',
-                right: 0,
-                left: 0,
-                top: 0,
-                position: 'absolute',
-                borderBottomWidth: 0,
-              },
-            headerLeft: null,
-            headerTitle: "MERCADO DE JUGADORES",
-        };
-    };
+  static navigationOptions = {
+      header: null
+  };
 
   render() {
     return (
@@ -31,7 +19,7 @@ export default class MarketPersonal extends Component{
         initialPage={0}>
         <View style={styles.pageStyle} key="1">
         <View style={styles.back}>
-
+          <ImageBackground source={img1} style={styles.viewPager}>
           <View style={{backgroundColor: '#e6d901', height: '90%', width: '90%', margin: '5%', borderRadius: 15}}>
             <View style={{flexDirection: 'row'}}>
               <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
@@ -63,7 +51,7 @@ export default class MarketPersonal extends Component{
               <Text style={styles.name2}>$10,000.00 MXN</Text>
             </View>
           </View>
-
+          </ImageBackground>
         </View>
         </View>
 
