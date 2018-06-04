@@ -5,8 +5,8 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-native';
-import {Container, Content, Tab, Tabs, Button, Icon} from 'native-base';
-import img3 from '../../assets/imgs/cancha.jpg';
+import {Tab, Tabs, Button, Icon} from 'native-base';
+import fondo from '../../assets/imgs/fondo1.jpg';
 import Stadistics from '../stadistics/Stadistics';
 import Market from '../market/MarketTeam';
 
@@ -17,10 +17,9 @@ export default class Index extends Component{
 
   render() {
     return (
-      <Container>
-      <ImageBackground source={img3} style={styles.viewPager}>
+      <ImageBackground source={fondo} style={styles.viewPager}>
 
-        <Content>
+        <ScrollView>
 
         <View style={styles.view2}>
           <View style={styles.margin}>
@@ -66,9 +65,8 @@ export default class Index extends Component{
           </View>
         </View>
 
-        </Content>
+        </ScrollView>
       </ImageBackground>
-      </Container>
     );
   }
 }

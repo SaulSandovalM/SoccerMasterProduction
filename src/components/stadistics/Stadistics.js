@@ -4,8 +4,9 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-native';
 import {Button} from 'native-base';
+import fondo from '../../assets/imgs/fondo2.jpg';
 
 export default class Stadistics extends Component{
   static navigationOptions = {
@@ -14,6 +15,7 @@ export default class Stadistics extends Component{
 
   render() {
     return (
+      <ImageBackground source={fondo} style={styles.viewPager}>
       <View>
         <View style={styles.container}>
           <View style={styles.view}>
@@ -115,11 +117,15 @@ export default class Stadistics extends Component{
         </View>
 
       </View>
+      </ImageBackground>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  viewPager: {
+    flex: 1,
+  },
   container: {
     flexDirection: 'row',
     backgroundColor: 'grey'

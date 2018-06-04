@@ -7,6 +7,7 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image} from 'react-native';
 import {List, ListItem, Thumbnail, Body} from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import fondo from '../../assets/imgs/fondo3.jpg';
 
 export default class MarketTeam extends Component{
   static navigationOptions = {
@@ -15,6 +16,7 @@ export default class MarketTeam extends Component{
 
     render() {
       return (
+        <ImageBackground source={fondo} style={styles.viewPager}>
         <View style={styles.container}>
 
           <ScrollView>
@@ -60,11 +62,15 @@ export default class MarketTeam extends Component{
           </ScrollView>
 
         </View>
+        </ImageBackground>
         );
     }
 }
 
 const styles = StyleSheet.create({
+  viewPager: {
+    flex: 1,
+  },
   container: {
     flex: 1,
   },
