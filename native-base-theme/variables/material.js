@@ -143,11 +143,11 @@ export default {
 
   // Tab
   tabDefaultBg: "#94c552",
-  topTabBarTextColor: "rgb(102,165,138)",
-  topTabBarActiveTextColor: "rgb(102,165,138)",
-  topTabActiveBgColor: "rgb(102,165,138)",
+  topTabBarTextColor: "white",
+  topTabBarActiveTextColor: "white",
+  topTabActiveBgColor: "white",
   topTabBarBorderColor: "#fff",
-  topTabBarActiveBorderColor: "rgb(102,165,138)",
+  topTabBarActiveBorderColor: "white",
 
   // Header
   toolbarBtnColor: "#94c552",

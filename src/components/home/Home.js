@@ -14,9 +14,12 @@ import getTheme from '../../../native-base-theme/components';
 import material from '../../../native-base-theme/variables/material';
 
 export default class Home extends Component {
+
+
     static navigationOptions = {
         header: null
     };
+
 
     render() {
         return (
