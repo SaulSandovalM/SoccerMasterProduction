@@ -7,7 +7,7 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
 import * as firebase from 'firebase';
 
-export default class Home extends Component{
+export default class Copas extends Component{
   static navigationOptions = {
     header: null
 };

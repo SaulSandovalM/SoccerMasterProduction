@@ -10,8 +10,6 @@ import img3 from '../../assets/imgs/cancha.jpg';
 import ListComponent from './MatchList';
 import * as firebase from 'firebase';
 
-
-
 export default class Index extends Component {
     constructor() {
         super();
