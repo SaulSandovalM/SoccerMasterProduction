@@ -10,6 +10,7 @@ import img3 from '../../assets/imgs/pasto.jpg';
 import Index from './Index';
 import Stadistics from '../stadistics/Stadistics';
 import Market from '../market/MarketTeam';
+import Stadistics from '../arbitro/Arbitro';
 import getTheme from '../../../native-base-theme/components';
 import material from '../../../native-base-theme/variables/material';
 
@@ -35,6 +36,9 @@ export default class Home extends Component {
                             </Tab>
                             <Tab heading="Mercado">
                                 <Market/>
+                            </Tab>
+                            <Tab heading="Arbitro">
+                                <Arbitro/>
                             </Tab>
                         </Tabs>
 
