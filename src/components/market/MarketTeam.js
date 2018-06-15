@@ -32,7 +32,7 @@ export default class MarketTeam extends Component {
                 lista.push({
                     name: child.val().name,
                     price: child.val().price,
-                    cant:child.val().cant,
+                    cant: child.val().cant,
                     done: child.val().done,
                     id: child.key
                 });
