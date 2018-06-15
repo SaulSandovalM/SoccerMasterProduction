@@ -4,8 +4,10 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image, ViewPagerAndroid, ImageBackground} from 'react-native';
-import img1 from '../../assets/imgs/balones.jpg';
+import {Container, Content, Header, Footer, FooterTab, Button, StyleProvider, Left, Right, Body} from 'native-base';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import getTheme from '../../../native-base-theme/components';
+import material from '../../../native-base-theme/variables/material';
 
 export default class MarketPersonal extends Component {
     static navigationOptions = {
@@ -14,1014 +16,184 @@ export default class MarketPersonal extends Component {
 
     render() {
         return (
-            <ViewPagerAndroid
-                style={styles.viewPager}
-                initialPage={0}>
-                <View style={styles.pageStyle} key="1">
-                    <View style={styles.back}>
-                        <ImageBackground source={img1} style={styles.viewPager}>
-                            <View style={{
-                                backgroundColor: '#e6d901',
-                                height: '90%',
-                                width: '90%',
-                                margin: '5%',
-                                borderRadius: 15
-                            }}>
-                                <View style={{flexDirection: 'row'}}>
-                                    <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                        <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                        <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                        <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                               source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                        <Image style={{height: 50, width: '50%', margin: 5}}
-                                               source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                    </View>
-                                    <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                        <Image style={{height: 200, width: '100%'}}
-                                               source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                    </View>
-                                </View>
-                                <View style={{
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    backgroundColor: '#fff4a2'
-                                }}>
-                                    <Text style={styles.name}>SAUL SANDOVAL</Text>
-                                </View>
-                                <View style={{
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    backgroundColor: '#fda300',
-                                    flexDirection: 'row'
-                                }}>
-                                    <Text style={styles.name2}>ALTURA 170 CM</Text>
-                                    <Text style={styles.name2}>PESO 60 KG</Text>
-                                </View>
-                                <View style={{
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    backgroundColor: '#fda300',
-                                    flexDirection: 'row'
-                                }}>
-                                    <Text style={styles.name2}>EDAD 21</Text>
-                                    <Text style={styles.name2}>GOLES 5</Text>
-                                </View>
-                                <View style={{alignSelf: 'center', backgroundColor: '#fda300'}}>
-                                    <Text style={styles.name4}>PARTIDOS JUGADOS 3</Text>
-                                </View>
+          <StyleProvider style={getTheme(material)}>
+          <Container style={styles.container}>
 
-                                <View style={{
-                                    flex: 1,
-                                    flexDirection: 'column',
-                                    justifyContent: 'center',
-                                    alignItems: 'center'
-                                }}>
-                                    <Text style={styles.name2}>$10,000.00 MXN</Text>
-                                </View>
-                            </View>
-                        </ImageBackground>
-                    </View>
-                </View>
+              <Header style={styles.header}>
+                  <Left>
+                      <Button transparent>
+                          <Icon name='navicon' style={styles.icon}/>
+                      </Button>
+                  </Left>
+                  <Body>
+                  <Text style={styles.icon}>MERCADO</Text>
+                  </Body>
+                  <Right>
+                  </Right>
+              </Header>
 
-                <View style={styles.pageStyle} key="2">
-                    <View style={styles.back}>
+              <Content>
 
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
+                <View style={{flexDirection: 'row', width: '100%'}}>
 
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
 
                 </View>
 
-                <View style={styles.pageStyle} key="3">
-                    <View style={styles.back}>
+                <View style={{flexDirection: 'row', width: '100%'}}>
 
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
 
                 </View>
 
-                <View style={styles.pageStyle} key="4">
-                    <View style={styles.back}>
+                <View style={{flexDirection: 'row', width: '100%'}}>
 
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
 
                 </View>
 
-                <View style={styles.pageStyle} key="5">
-                    <View style={styles.back}>
+                <View style={{flexDirection: 'row', width: '100%'}}>
 
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
 
                 </View>
 
-                <View style={styles.pageStyle} key="6">
-                    <View style={styles.back}>
+                <View style={{flexDirection: 'row', width: '100%'}}>
 
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
+                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
+                    <Image style={{width: '100%', height: 100}}
+                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                    <Text>Nombre</Text>
+                    <Text>$ 10,000</Text>
+                  </View>
 
                 </View>
 
-                <View style={styles.pageStyle} key="7">
-                    <View style={styles.back}>
+              </Content>
 
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
+              <Footer>
+                  <FooterTab>
+                      <Button onPress={() => this.props.navigation.push('Partidos')}>
+                          <Icon name="soccer-ball-o" style={styles.icon}/>
+                          <Text style={{color: 'white'}}>Partidos</Text>
+                      </Button>
+                      <Button onPress={() => this.props.navigation.push('Stadistics')}>
+                          <Icon name="bar-chart-o" style={styles.icon}/>
+                          <Text style={{color: 'white'}}>Estadisticas</Text>
+                      </Button>
+                      <Button onPress={() => this.props.navigation.push('MarketTeam')}>
+                          <Icon name="dollar" style={styles.icon}/>
+                          <Text style={{color: 'white'}}>Mercado</Text>
+                      </Button>
+                  </FooterTab>
+              </Footer>
 
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
-
-                </View>
-
-                <View style={styles.pageStyle} key="8">
-                    <View style={styles.back}>
-
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
-
-                </View>
-
-                <View style={styles.pageStyle} key="9">
-                    <View style={styles.back}>
-
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
-
-                </View>
-
-                <View style={styles.pageStyle} key="10">
-                    <View style={styles.back}>
-
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
-
-                </View>
-
-                <View style={styles.pageStyle} key="11">
-                    <View style={styles.back}>
-
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
-
-                </View>
-
-                <View style={styles.pageStyle} key="12">
-                    <View style={styles.back}>
-
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
-
-                </View>
-
-                <View style={styles.pageStyle} key="13">
-                    <View style={styles.back}>
-
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
-
-                </View>
-
-                <View style={styles.pageStyle} key="14">
-                    <View style={styles.back}>
-
-                        <View style={{
-                            backgroundColor: '#e6d901',
-                            height: '90%',
-                            width: '90%',
-                            margin: '5%',
-                            borderRadius: 15
-                        }}>
-                            <View style={{flexDirection: 'row'}}>
-                                <View style={{width: '50%', justifyContent: 'center', alignItems: 'center'}}>
-                                    <Text style={{fontSize: 30, color: 'black', fontWeight: 'bold'}}>21</Text>
-                                    <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>MED</Text>
-                                    <Image style={{height: 100, width: '50%', marginTop: 5}}
-                                           source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                                    <Image style={{height: 50, width: '50%', margin: 5}}
-                                           source={{uri: 'http://flags.fmcdn.net/data/flags/w580/mx.png'}}/>
-                                </View>
-                                <View style={{width: '50%', justifyContent: 'flex-end'}}>
-                                    <Image style={{height: 200, width: '100%'}}
-                                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
-                                </View>
-                            </View>
-                            <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff4a2'}}>
-                                <Text style={styles.name}>SAUL SANDOVAL</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-                            <View style={{
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                backgroundColor: '#fda300',
-                                flexDirection: 'row'
-                            }}>
-                                <Text style={styles.name2}>87 RIT </Text>
-                                <Text style={styles.name2}> 87 RIT</Text>
-                            </View>
-
-                            <View style={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Text style={styles.name2}>$10,000.00 MXN</Text>
-                            </View>
-                        </View>
-
-                    </View>
-
-                </View>
-            </ViewPagerAndroid>
+          </Container>
+          </StyleProvider>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    viewPager: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+    container: {
+        backgroundColor: 'black'
+    },
+    header: {
+        marginTop: 24
+    },
+    icon: {
+        color: 'white',
+        fontSize: 20
+    },
+    fecha: {
+        color: 'grey',
+        alignSelf: 'center',
+        fontSize: 15,
+        marginTop: 15
     },
     back: {
-        backgroundColor: '#08088A',
-        height: '100%'
+        alignItems: 'center',
+        backgroundColor: '#9F81F7',
+        width: '100%',
+        height: 100,
+        flexDirection: 'row',
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15
     },
-    name: {
-        color: 'black',
-        fontWeight: 'bold',
-        fontSize: 30,
-        margin: 5,
-    },
-    name2: {
-        color: 'black',
-        fontWeight: 'bold',
+    num: {
+        color: 'white',
         fontSize: 20,
+        marginTop: -10,
         marginLeft: 10,
-        justifyContent: 'center',
-        width: '50%'
+        marginRight: 5
     },
-    name4: {
-        color: 'black',
-        fontWeight: 'bold',
+    space: {
+        color: 'white',
         fontSize: 20,
-        margin: 5,
-        justifyContent: 'center',
-        width: '100%'
+        marginTop: -10,
+        marginLeft: 5,
+        marginRight: 10
     },
-    name3: {
-        color: 'black',
-        fontWeight: 'bold',
-        fontSize: 30,
-        margin: 5,
-        justifyContent: 'center',
-        width: '100%'
+    img: {
+      width: 40,
+      height: 40,
+      marginTop: -10,
+      marginRight: 5
     },
+    team: {
+      color: 'white',
+      fontSize: 20,
+      marginTop: -10,
+      width: 150
+    }
 });
