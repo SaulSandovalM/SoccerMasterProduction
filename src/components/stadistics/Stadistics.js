@@ -9,6 +9,7 @@ import {Container, Content, Header, Footer, FooterTab, Button, StyleProvider, Le
 import Icon from 'react-native-vector-icons/FontAwesome';
 import getTheme from '../../../native-base-theme/components';
 import material from '../../../native-base-theme/variables/material';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class Stadistics extends Component {
     static navigationOptions = {
@@ -20,7 +21,7 @@ export default class Stadistics extends Component {
             <StyleProvider style={getTheme(material)}>
                 <Container style={styles.container}>
 
-                    <Header style={styles.header}>
+                    <Header>
                         <Left>
                             <Button transparent>
                                 <Icon name='navicon' style={styles.icon}/>
@@ -34,43 +35,64 @@ export default class Stadistics extends Component {
                     </Header>
 
                     <Content>
-
                         <View style={{marginTop: 30}}>
-                            <View style={{
-                                alignItems: 'center',
-                                backgroundColor: '#9F81F7',
-                                width: '100%',
-                                height: 100,
-                                flexDirection: 'row',
-                                borderTopLeftRadius: 15,
-                                borderTopRightRadius: 15
-                            }}>
-                                <Text style={{
-                                    color: 'white',
-                                    fontSize: 20,
-                                    marginTop: -10,
-                                    marginLeft: 10,
-                                    marginRight: 5
-                                }}>1</Text>
-                                <Text style={{
-                                    color: 'white',
-                                    fontSize: 20,
-                                    marginTop: -10,
-                                    marginLeft: 5,
-                                    marginRight: 10
-                                }}> - </Text>
-                                <Image style={{width: 40, height: 40, marginTop: -10, marginRight: 5}}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, width: 150}}>PACHUCA</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>10</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>20</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>30</Text>
-                            </View>
-
 
                             <View style={{
                                 alignItems: 'center',
-                                backgroundColor: 'red',
+                                backgroundColor: '#e31114',
+                                width: '100%',
+                                height: 100,
+                                flexDirection: 'row',
+                                borderTopLeftRadius: 15,
+                                borderTopRightRadius: 15,
+                                marginTop: -20
+                            }}>
+
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginLeft: 10,
+                                    marginRight: 5
+                                }}>1</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginLeft: 5,
+                                    marginRight: 10
+                                }}> - </Text>
+                                <Image style={{width: 40, height: 40, marginTop: -10, marginRight: 5}}
+                                       source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    width: 150
+                                }}>PACHUCA</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>10</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>20</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>30</Text>
+                            </View>
+
+                            <View style={{
+                                alignItems: 'center',
+                                backgroundColor: '#008641',
                                 width: '100%',
                                 height: 100,
                                 flexDirection: 'row',
@@ -93,15 +115,35 @@ export default class Stadistics extends Component {
                                     marginRight: 10
                                 }}> - </Text>
                                 <Image style={{width: 40, height: 40, marginTop: -10, marginRight: 5}}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, width: 150}}>PACHUCA</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>10</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>20</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>30</Text>
+                                       source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    width: 150
+                                }}>PACHUCA</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>10</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>20</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>30</Text>
                             </View>
                             <View style={{
                                 alignItems: 'center',
-                                backgroundColor: 'blue',
+                                backgroundColor: '#131e7d',
                                 width: '100%',
                                 height: 100,
                                 flexDirection: 'row',
@@ -124,15 +166,35 @@ export default class Stadistics extends Component {
                                     marginRight: 10
                                 }}> - </Text>
                                 <Image style={{width: 40, height: 40, marginTop: -10, marginRight: 5}}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, width: 150}}>PACHUCA</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>10</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>20</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>30</Text>
+                                       source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    width: 150
+                                }}>PACHUCA</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>10</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>20</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>30</Text>
                             </View>
                             <View style={{
                                 alignItems: 'center',
-                                backgroundColor: 'yellow',
+                                backgroundColor: '#272727',
                                 width: '100%',
                                 height: 100,
                                 flexDirection: 'row',
@@ -155,15 +217,35 @@ export default class Stadistics extends Component {
                                     marginRight: 10
                                 }}> - </Text>
                                 <Image style={{width: 40, height: 40, marginTop: -10, marginRight: 5}}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, width: 150}}>PACHUCA</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>10</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>20</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>30</Text>
+                                       source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    width: 150
+                                }}>PACHUCA</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>10</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>20</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>30</Text>
                             </View>
                             <View style={{
                                 alignItems: 'center',
-                                backgroundColor: 'grey',
+                                backgroundColor: '#ffcb0a',
                                 width: '100%',
                                 height: 100,
                                 flexDirection: 'row',
@@ -186,15 +268,35 @@ export default class Stadistics extends Component {
                                     marginRight: 10
                                 }}> - </Text>
                                 <Image style={{width: 40, height: 40, marginTop: -10, marginRight: 5}}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, width: 150}}>PACHUCA</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>10</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>20</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>30</Text>
+                                       source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    width: 150
+                                }}>PACHUCA</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>10</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>20</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>30</Text>
                             </View>
                             <View style={{
                                 alignItems: 'center',
-                                backgroundColor: 'green',
+                                backgroundColor: '#006ad6',
                                 width: '100%',
                                 height: 100,
                                 flexDirection: 'row',
@@ -217,14 +319,33 @@ export default class Stadistics extends Component {
                                     marginRight: 10
                                 }}> - </Text>
                                 <Image style={{width: 40, height: 40, marginTop: -10, marginRight: 5}}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, width: 150}}>PACHUCA</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>10</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>20</Text>
-                                <Text style={{color: 'white', fontSize: 20, marginTop: -10, marginRight: 10}}>30</Text>
+                                       source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    width: 150
+                                }}>PACHUCA</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>10</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>20</Text>
+                                <Text style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    marginTop: -10,
+                                    marginRight: 10
+                                }}>30</Text>
                             </View>
                         </View>
-
                     </Content>
 
                     <Footer>
@@ -254,9 +375,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'black'
     },
-    header: {
-        marginTop: 24
-    },
+
     icon: {
         color: 'white',
         fontSize: 20
@@ -266,5 +385,14 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         fontSize: 15,
         marginTop: 15
-    }
+    },
+    linearGradient: {
+        flex: 1,
+        alignItems: 'center',
+        width: '100%',
+        height: 100,
+        flexDirection: 'row',
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15
+    },
 });

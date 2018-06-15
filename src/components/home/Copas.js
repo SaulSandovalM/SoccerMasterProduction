@@ -22,7 +22,7 @@ export default class Copas extends Component {
                     <ScrollView>
 
                         <View style={styles.view}>
-                            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')}
+                            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos|')}
                                                 style={styles.touch}>
                                 <Image style={styles.img}
                                        source={{uri: 'http://www.planeta7.com.mx/imagenes/copa%20del%20rey.jpg'}}/>

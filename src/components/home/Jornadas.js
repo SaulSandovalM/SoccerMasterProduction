@@ -6,7 +6,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
 
-export default class Equipos extends Component {
+export default class Jornadas extends Component {
     static navigationOptions = {
         header: null
     };
@@ -14,15 +14,15 @@ export default class Equipos extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text1}>ELIGE TU EQUIPO</Text>
+                <Text style={styles.text1}>ELIGE JORNADA</Text>
                 <Text style={styles.text2}>TOCA PARA EFECTUAR SELECCIÓN</Text>
 
                 <ScrollView>
 
                     <View style={styles.view}>
                         <TouchableHighlight onPress={() => this.props.navigation.push('Market')} style={styles.touch}>
-                            <Image style={styles.img}
-                                   source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                            <Text style={{color:'white'}}>JORNADA</Text>
+                            <Text style={{fontSize: 45, fontWeight:'bold', color:'white'}}>1</Text>
                         </TouchableHighlight>
                         <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
                             <Image style={styles.img}
@@ -73,25 +73,6 @@ export default class Equipos extends Component {
                                    source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/3294/3294.png'}}/>
                         </TouchableHighlight>
                     </View>
-                    <View style={styles.view}>
-                        <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
-                            <Image style={styles.img}
-                                   source={{uri: 'http://www.caratulasylogos.com/sites/default/files/arminia_bielefeld.png'}}/>
-                        </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
-                            <Image style={styles.img}
-                                   source={{uri: 'https://www.ligafutbol.net/wp-content/2009/04/escudo-madrid.png'}}/>
-                        </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
-                            <Image style={styles.img}
-                                   source={{uri: 'https://ugc.kn3.net/i/origin/http://lh4.ggpht.com/_gHhBxs3JECA/TO7EInnjZhI/AAAAAAAAALc/dhysgzqUE_I/Arsenal.png'}}/>
-                        </TouchableHighlight>
-                        <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
-                            <Image style={styles.img}
-                                   source={{uri: 'https://2.bp.blogspot.com/-DKUYPdrFp-A/V4083cnMsPI/AAAAAAAAFxA/2TLsXUyui4Iu29RaOafaAaR_4_-iQQ71ACLcB/s1600/BocaJuniors.pngg'}}/>
-                        </TouchableHighlight>
-                    </View>
-
                     <View style={styles.margin}/>
 
                 </ScrollView>
@@ -102,7 +83,8 @@ export default class Equipos extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+        flex: 1
     },
     text1: {
         fontSize: 20,
@@ -123,7 +105,9 @@ const styles = StyleSheet.create({
     touch: {
         width: '23%',
         height: 160,
-        margin: '1%'
+        margin: '1%',
+        alignItems: 'center',
+
     },
     img: {
         width: '100%',
