@@ -8,6 +8,7 @@ import {Container, Content, Header, Footer, FooterTab, Button, StyleProvider, Le
 import Icon from 'react-native-vector-icons/FontAwesome';
 import getTheme from '../../../native-base-theme/components';
 import material from '../../../native-base-theme/variables/material';
+import {StyleSheet, Text, View, Image} from 'react-native';
 
 export default class MarketPersonal extends Component {
     static navigationOptions = {
@@ -120,23 +121,6 @@ export default class MarketPersonal extends Component {
                 </View>
 
               </Content>
-
-              <Footer>
-                  <FooterTab>
-                      <Button onPress={() => this.props.navigation.push('Partidos')}>
-                          <Icon name="soccer-ball-o" style={styles.icon}/>
-                          <Text style={{color: 'white'}}>Partidos</Text>
-                      </Button>
-                      <Button onPress={() => this.props.navigation.push('Stadistics')}>
-                          <Icon name="bar-chart-o" style={styles.icon}/>
-                          <Text style={{color: 'white'}}>Estadisticas</Text>
-                      </Button>
-                      <Button onPress={() => this.props.navigation.push('MarketTeam')}>
-                          <Icon name="dollar" style={styles.icon}/>
-                          <Text style={{color: 'white'}}>Mercado</Text>
-                      </Button>
-                  </FooterTab>
-              </Footer>
 
           </Container>
           </StyleProvider>

@@ -14,6 +14,8 @@ export default class Equipos extends Component {
     render() {
         return (
             <View style={styles.container}>
+
+                <Image style={styles.logo} source={require('../../assets/imgs/Soccer.png')}/>
                 <Text style={styles.text1}>ELIGE TU EQUIPO</Text>
                 <Text style={styles.text2}>TOCA PARA EFECTUAR SELECCIÓN</Text>
 
@@ -106,7 +108,6 @@ const styles = StyleSheet.create({
     },
     text1: {
         fontSize: 20,
-        marginTop: 50,
         color: 'white',
         alignSelf: 'center'
     },
@@ -134,5 +135,10 @@ const styles = StyleSheet.create({
     },
     margin: {
         marginTop: 120
+    },
+    logo: {
+        width: 120,
+        height: 40,
+        alignSelf: 'center'
     }
 });

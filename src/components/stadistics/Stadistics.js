@@ -358,7 +358,7 @@ export default class Stadistics extends Component {
                                 <Icon name="bar-chart-o" style={styles.icon}/>
                                 <Text style={{color: 'white'}}>Estadisticas</Text>
                             </Button>
-                            <Button onPress={() => this.props.navigation.push('MarketTeam')}>
+                            <Button onPress={() => this.props.navigation.push('Market')}>
                                 <Icon name="dollar" style={styles.icon}/>
                                 <Text style={{color: 'white'}}>Mercado</Text>
                             </Button>

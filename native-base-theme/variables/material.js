@@ -150,8 +150,8 @@ export default {
     topTabBarActiveBorderColor: "white",
 
     // Header
-    toolbarBtnColor: "#94c552",
-    toolbarDefaultBg: "#94c552",
+    toolbarBtnColor: "#000",
+    toolbarDefaultBg: "#000",
     toolbarHeight: platform === "ios" ? 76 : 56,
     toolbarIconSize: platform === "ios" ? 20 : 22,
     toolbarSearchIconSize: platform === "ios" ? 20 : 23,

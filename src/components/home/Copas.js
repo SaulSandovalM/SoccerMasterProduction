@@ -16,13 +16,14 @@ export default class Copas extends Component {
             <View>
                 <View style={styles.container}>
 
+                    <Image style={styles.logo} source={require('../../assets/imgs/Soccer.png')}/>
                     <Text style={styles.text1}>ELIGE TU COPA</Text>
                     <Text style={styles.text2}>TOCA PARA EFECTUAR SELECCIÓN</Text>
 
                     <ScrollView>
 
                         <View style={styles.view}>
-                            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos|')}
+                            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')}
                                                 style={styles.touch}>
                                 <Image style={styles.img}
                                        source={{uri: 'http://www.planeta7.com.mx/imagenes/copa%20del%20rey.jpg'}}/>
@@ -92,7 +93,6 @@ const styles = StyleSheet.create({
     },
     text1: {
         fontSize: 20,
-        marginTop: 50,
         color: 'white',
         alignSelf: 'center'
     },
@@ -119,6 +119,11 @@ const styles = StyleSheet.create({
         borderColor: 'grey'
     },
     margin: {
-        marginTop: 120
+        marginTop: 220
+    },
+    logo: {
+        width: 120,
+        height: 40,
+        alignSelf: 'center'
     }
 });
