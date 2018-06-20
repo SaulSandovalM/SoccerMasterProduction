@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Content, List, ListItem, Text, Icon, Badge, Left, Body, Right, Switch, Button } from 'native-base';
+import { Container, Content} from 'native-base';
 import RowComponent from './RowComponent';
 
 
-export default class MarketList extends Component {
+export default class MatchList extends Component {
     render() {
         return (
             <Container>

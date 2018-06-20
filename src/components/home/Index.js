@@ -5,118 +5,119 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-native';
-import {Tab, Tabs, Button, Icon} from 'native-base';
-import fondo from '../../assets/imgs/fondo1.jpg';
-import Stadistics from '../stadistics/Stadistics';
-import Market from '../market/MarketTeam';
+import {Container, Content, Tab, Tabs, Button, Icon} from 'native-base';
+import img3 from '../../assets/imgs/cancha.jpg';
+import ListComponent from './MatchList';
+import * as firebase from 'firebase';
 
-export default class Index extends Component{
-  static navigationOptions = {
-      header: null
-  };
+export default class Index extends Component {
+    constructor() {
+        super();
 
-  render() {
-    return (
-      <ImageBackground source={fondo} style={styles.viewPager}>
+        this.state = {
+            nuevo: '',
+            lista: []
+        }
 
-        <ScrollView>
+    }
 
-        <View style={styles.view2}>
-          <View style={styles.margin}>
-            <View style={styles.center}>
-              <Text style={styles.title}>Proximos Partidos</Text>
-            </View>
+    static navigationOptions = {
+        header: null
+    };
 
-            <View>
-              <Text style={styles.date}>Lunes, 21 de Mayo</Text>
-            </View>
+    listenForItems = (itemsRef) => {
+        itemsRef.on('value', (snap) => {
 
-            <View style={styles.center}>
-              <View style={styles.view}>
-                <Text style={styles.color}>Pachuca</Text>
-              </View>
+            // get children as an array
+            var lista = [];
+            snap.forEach((child) => {
+                lista.push({
+                    name: child.val().name,
+                    nametwo: child.val().nametwo,
+                    horario: child.val().horario,
+                    photos: child.val().photos,
+                    done: child.val().done,
+                    id: child.key
+                });
+            });
 
-              <Image style={styles.img} source={{uri:'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-              <Text style={styles.color}> 7:00 PM </Text>
-              <Image style={styles.img} source={{uri:'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
+            this.setState({
+                lista: lista
+            });
 
-              <View style={styles.view}>
-                <Text style={styles.color}>Pachuca</Text>
-              </View>
-            </View>
+        });
+    };
 
-            <View>
-              <Text style={styles.date}>Martes, 22 de Mayo</Text>
-            </View>
+    componentDidMount() {
+        const itemsRef = firebase.database().ref('partidos');
+        this.listenForItems(itemsRef);
+    }
 
-            <View style={styles.center}>
-              <View style={styles.view}>
-                <Text style={styles.color}>America</Text>
-              </View>
+    render() {
+        return (
+            <Container>
+                <ImageBackground source={img3} style={styles.viewPager}>
 
-              <Image style={styles.img} source={{uri:'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-              <Text style={styles.color}> 9:00 PM </Text>
-              <Image style={styles.img} source={{uri:'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
+                    <Content>
 
-              <View style={styles.view}>
-                <Text style={styles.color}>Cruz Azul</Text>
-              </View>
-            </View>
-          </View>
-        </View>
+                        <ListComponent
+                            lista={this.state.lista}
+                            changeDone={this.changeDone}
+                        />
 
-        </ScrollView>
-      </ImageBackground>
-    );
-  }
+                    </Content>
+                </ImageBackground>
+            </Container>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  viewPager: {
-    flex: 1,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    marginTop: 24
-  },
-  title: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 18,
-  },
-  color: {
-    color: 'white',
-    fontWeight: 'bold',
-  },
-  date: {
-    color: 'white',
-    fontWeight: 'bold',
-    margin: 8
-  },
-  view: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 60
-  },
-  margin: {
-    marginTop: 10,
-    width: '95%',
-    backgroundColor: 'grey',
-    opacity: 0.8
-  },
-  center: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  img: {
-    width: 70,
-    height: 70
-  },
-  view2: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
+    viewPager: {
+        flex: 1,
+    },
+    container: {
+        flex: 1,
+        backgroundColor: 'black',
+        marginTop: 24
+    },
+    title: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 18,
+    },
+    color: {
+        color: 'white',
+        fontWeight: 'bold',
+    },
+    date: {
+        color: 'white',
+        fontWeight: 'bold',
+        margin: 8
+    },
+    view: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 60
+    },
+    margin: {
+        marginTop: 10,
+        width: '95%',
+        backgroundColor: 'grey',
+        opacity: 0.8
+    },
+    center: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    img: {
+        width: 70,
+        height: 70
+    },
+    view2: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
 });

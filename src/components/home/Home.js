@@ -4,98 +4,102 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-native';
-import {Container, Content, Tab, Tabs, Header, StyleProvider} from 'native-base';
-import img3 from '../../assets/imgs/pasto.jpg';
-import Index from './Index';
-import Stadistics from '../stadistics/Stadistics';
-import Market from '../market/MarketTeam';
-import Stadistics from '../arbitro/Arbitro';
-import getTheme from '../../../native-base-theme/components';
-import material from '../../../native-base-theme/variables/material';
+import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
+import * as firebase from 'firebase';
 
-export default class Home extends Component {
-    static navigationOptions = {
-        header: null
-    };
+export default class Home extends Component{
+  static navigationOptions = {
+    header: null
+};
 
-    render() {
-        return (
-            <StyleProvider style={getTheme(material)}>
-                <Container>
-                    <ImageBackground source={img3} style={styles.viewPager}>
+  render() {
+    return (
+      <View style={styles.container}>
 
-                        <Header hasTabs/>
+          <Text style={styles.text1}>ELIGE TU COPA</Text>
+          <Text style={styles.text2}>TOCA PARA EFECTUAR SELECCIÓN</Text>
 
-                        <Tabs initialPage={1}>
-                            <Tab heading="Inicio">
-                                <Index/>
-                            </Tab>
-                            <Tab heading="Estadisticas">
-                                <Stadistics/>
-                            </Tab>
-                            <Tab heading="Mercado">
-                                <Market/>
-                            </Tab>
-                            <Tab heading="Arbitro">
-                                <Arbitro/>
-                            </Tab>
-                        </Tabs>
+        <ScrollView>
 
-                    </ImageBackground>
-                </Container>
-            </StyleProvider>
-        );
-    }
+          <View style={styles.view}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/copa%20del%20rey.jpg'}}/>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/copa%20am%C3%A9rica.jpg'}}/>
+            </TouchableHighlight>
+          </View>
+          <View style={styles.view}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/copa%20oro.jpg'}}/>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/copa%20libertadores.jpg'}}/>
+            </TouchableHighlight>
+          </View>
+          <View style={styles.view}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/copa%20africana.jpg'}}/>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/copa%20argentina.jpg'}}/>
+              </TouchableHighlight>
+          </View>
+          <View style={styles.view}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/copa%20confederaciones.jpg'}}/>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/copa%20sudamericana.jpg'}}/>
+            </TouchableHighlight>
+          </View>
+          <View style={styles.view}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('Equipos')} style={styles.touch}>
+              <Image style={styles.img} source={{uri:'http://www.planeta7.com.mx/imagenes/femenil.jpg'}}/>
+            </TouchableHighlight>
+          </View>
+          <View style={styles.margin} />
+
+        </ScrollView>
+
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    viewPager: {
-        flex: 1,
-    },
-    container: {
-        flex: 1,
-        backgroundColor: 'black',
-        marginTop: 24
-    },
-    title: {
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: 18,
-    },
-    color: {
-        color: 'white',
-        fontWeight: 'bold',
-    },
-    date: {
-        color: 'white',
-        fontWeight: 'bold',
-        margin: 8
-    },
-    view: {
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 60
-    },
-    margin: {
-        marginTop: 10,
-        width: '95%',
-        backgroundColor: 'grey',
-        opacity: 0.8
-    },
-    center: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    img: {
-        width: 70,
-        height: 70
-    },
-    view2: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 85
-    }
+  container: {
+    backgroundColor: 'black'
+  },
+  text1: {
+    fontSize: 20,
+    marginTop: 50,
+    color: 'white',
+    alignSelf: 'center'
+  },
+  text2: {
+    color: 'grey',
+    alignSelf: 'center',
+    fontSize: 15,
+    marginTop: 10,
+    height: 30
+  },
+  view: {
+    flexDirection: 'row'
+  },
+  touch: {
+    width: '48%',
+    height: 160,
+    margin: '1%'
+  },
+  img: {
+    width: '100%',
+    height: 160,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'grey'
+  },
+  margin: {
+    marginTop: 120
+  }
 });
