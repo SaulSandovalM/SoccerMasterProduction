@@ -20,7 +20,7 @@ export default class Equipos extends Component {
                 <ScrollView>
 
                     <View style={styles.view}>
-                        <TouchableHighlight onPress={() => this.props.navigation.push('Market')} style={styles.touch}>
+                        <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
                             <Image style={styles.img}
                                    source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
                         </TouchableHighlight>
