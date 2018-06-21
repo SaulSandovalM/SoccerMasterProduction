@@ -5,33 +5,43 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image, TouchableHighlight} from 'react-native';
-import {Container, Content, Header, Footer, FooterTab, Button, StyleProvider, Left, Right, Body} from 'native-base';
+import {Container, Content, Button, StyleProvider, Left, Right, Body} from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import getTheme from '../../../native-base-theme/components';
 import material from '../../../native-base-theme/variables/material';
+import Header from '../comun/Header';
+import Footer from '../comun/Footer';
 
 export default class Market extends Component {
-    static navigationOptions = {
-        header: null
-    };
+  constructor(props){
+    super(props)
+    this.state = {
+      isOpen: false
+    }
+  }
 
-    render() {
-        return (
-            <StyleProvider style={getTheme(material)}>
-                <Container style={styles.container}>
+  toggle(){
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
 
-                    <Header style={styles.header}>
-                        <Left>
-                            <Button transparent>
-                                <Icon name='navicon' style={styles.icon}/>
-                            </Button>
-                        </Left>
-                        <Body>
-                        <Text style={styles.icon}>MERCADO</Text>
-                        </Body>
-                        <Right>
-                        </Right>
-                    </Header>
+  updateMenu(isOpen){
+    this.setState({isOpen})
+  }
+
+  static navigationOptions = {
+      header: null
+  };
+
+  render() {
+    return (
+      <StyleProvider style={getTheme(material)}>
+        <Container style={styles.container}>
+
+        <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
+
+          <Header/>
 
                     <Content>
 
@@ -100,22 +110,9 @@ export default class Market extends Component {
 
                     </Content>
 
-                    <Footer>
-                        <FooterTab>
-                            <Button onPress={() => this.props.navigation.push('Partidos')}>
-                                <Icon name="soccer-ball-o" style={styles.icon}/>
-                                <Text style={{color: 'white'}}>Partidos</Text>
-                            </Button>
-                            <Button onPress={() => this.props.navigation.push('Stadistics')}>
-                                <Icon name="bar-chart-o" style={styles.icon}/>
-                                <Text style={{color: 'white'}}>Estadisticas</Text>
-                            </Button>
-                            <Button onPress={() => this.props.navigation.push('MarketTeam')}>
-                                <Icon name="dollar" style={styles.icon}/>
-                                <Text style={{color: 'white'}}>Mercado</Text>
-                            </Button>
-                        </FooterTab>
-                    </Footer>
+                    <Footer/>
+
+                    </SideMenu>
 
                 </Container>
             </StyleProvider>

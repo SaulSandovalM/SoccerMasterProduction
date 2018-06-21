@@ -5,56 +5,67 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
-import {Container, Content, Header, Footer, FooterTab, Button, StyleProvider, Left, Right, Body} from 'native-base';
+import {Container, Content, Button, StyleProvider, Left, Right, Body} from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import getTheme from '../../../native-base-theme/components';
 import material from '../../../native-base-theme/variables/material';
 import LinearGradient from 'react-native-linear-gradient';
+import Header from '../comun/Header';
+import Footer from '../comun/Footer';
 
 export default class Stadistics extends Component {
-    static navigationOptions = {
-        header: null
-    };
+  constructor(props){
+    super(props)
+    this.state = {
+      isOpen: false
+    }
+  }
 
-    render() {
-        return (
-            <StyleProvider style={getTheme(material)}>
-                <Container style={styles.container}>
+  toggle(){
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
 
-                    <Header>
-                        <Left>
-                            <Button transparent>
-                                <Icon name='navicon' style={styles.icon}/>
-                            </Button>
-                        </Left>
-                        <Body>
-                        <Text style={styles.icon}>JORNADA</Text>
-                        </Body>
-                        <Right>
-                        </Right>
-                    </Header>
+  updateMenu(isOpen){
+    this.setState({isOpen})
+  }
 
-                    <Content>
-                        <View style={{marginTop: 30}}>
+  static navigationOptions = {
+      header: null
+  };
 
-                            <View style={{
-                                alignItems: 'center',
-                                backgroundColor: '#e31114',
-                                width: '100%',
-                                height: 100,
-                                flexDirection: 'row',
-                                borderTopLeftRadius: 15,
-                                borderTopRightRadius: 15,
-                                marginTop: -20
-                            }}>
+  render() {
+    return (
+      <StyleProvider style={getTheme(material)}>
+        <Container style={styles.container}>
 
-                                <Text style={{
-                                    color: 'white',
-                                    fontSize: 20,
-                                    marginTop: -10,
-                                    marginLeft: 10,
-                                    marginRight: 5
-                                }}>1</Text>
+          <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
+
+          <Header/>
+
+          <Content>
+              <View style={{marginTop: 30}}>
+
+                <View style={{
+                    alignItems: 'center',
+                    backgroundColor: '#e31114',
+                    width: '100%',
+                    height: 100,
+                    flexDirection: 'row',
+                    borderTopLeftRadius: 15,
+                    borderTopRightRadius: 15,
+                    marginTop: -20
+                }}>
+
+                <Text style={{
+                    color: 'white',
+                    fontSize: 20,
+                    marginTop: -10,
+                    marginLeft: 10,
+                    marginRight: 5
+                }}>1</Text>
+
                                 <Text style={{
                                     color: 'white',
                                     fontSize: 20,
@@ -348,22 +359,9 @@ export default class Stadistics extends Component {
                         </View>
                     </Content>
 
-                    <Footer>
-                        <FooterTab>
-                            <Button onPress={() => this.props.navigation.push('Partidos')}>
-                                <Icon name="soccer-ball-o" style={styles.icon}/>
-                                <Text style={{color: 'white'}}>Partidos</Text>
-                            </Button>
-                            <Button onPress={() => this.props.navigation.push('Stadistics')}>
-                                <Icon name="bar-chart-o" style={styles.icon}/>
-                                <Text style={{color: 'white'}}>Estadisticas</Text>
-                            </Button>
-                            <Button onPress={() => this.props.navigation.push('Market')}>
-                                <Icon name="dollar" style={styles.icon}/>
-                                <Text style={{color: 'white'}}>Mercado</Text>
-                            </Button>
-                        </FooterTab>
-                    </Footer>
+                    <Footer/>
+
+                    </SideMenu>
 
                 </Container>
             </StyleProvider>
@@ -375,7 +373,6 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'black'
     },
-
     icon: {
         color: 'white',
         fontSize: 20

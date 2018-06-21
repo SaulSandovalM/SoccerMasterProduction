@@ -11,7 +11,7 @@ class Menu extends Component {
         return (
             <View style={styles.menu}>
               <Text style={{color: 'white', fontSize: 20, alignSelf: 'center', width: width/2}}>Menu</Text>
-              <View>
+              <View style={{width: width/2, alignSelf: 'center'}}>
                 <Button rounded light>
                   <Text>Tabla de Posiciones</Text>
                 </Button>
