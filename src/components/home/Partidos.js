@@ -12,7 +12,7 @@ import material from '../../../native-base-theme/variables/material';
 import LinearGradient from 'react-native-linear-gradient';
 import Header from '../comun/Header';
 import SideMenu from 'react-native-side-menu';
-import Menu from './Menu';
+import Menu from '../comun/Menu';
 import Footer from '../comun/Footer';
 
 export default class Partidos extends Component {
@@ -49,9 +49,11 @@ export default class Partidos extends Component {
               <Content>
 
                 <View style={styles.fondo}>
+                  <Text style={styles.jordana}>JORNADA</Text>
                   <Text style={styles.fecha}>FECHA</Text>
                 </View>
 
+                <View style={{backgroundColor: 'black'}}>
                 <LinearGradient
                   start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
                   locations={[0.94, 0.95]}
@@ -70,7 +72,7 @@ export default class Partidos extends Component {
 
                 <LinearGradient
                   start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
-                  locations={[0.98, 0.99]}
+                  locations={[0.94, 0.95]}
                   colors={['#131e7d', '#272727']}
                   style={styles.linearGradient}
                 >
@@ -86,7 +88,7 @@ export default class Partidos extends Component {
 
                 <LinearGradient
                     start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
-                    locations={[0.97, 0.98]}
+                    locations={[0.94, 0.95]}
                     colors={['#ffcb0a', '#006ad6']}
                     style={styles.linearGradient}
                 >
@@ -102,7 +104,7 @@ export default class Partidos extends Component {
 
                 <LinearGradient
                     start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
-                    locations={[0.97, 0.98]}
+                    locations={[0.94, 0.95]}
                     colors={['#008641', '#131e7d']}
                     style={styles.linearGradient}
                 >
@@ -118,7 +120,7 @@ export default class Partidos extends Component {
 
                 <LinearGradient
                     start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
-                    locations={[0.75, 0.76]}
+                    locations={[0.94, 0.95]}
                     colors={['#e31114', '#008641']}
                     style={styles.linearGradient}
                 >
@@ -131,6 +133,7 @@ export default class Partidos extends Component {
                   </View>
 
                 </LinearGradient>
+                </View>
 
               </Content>
 
@@ -149,7 +152,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     alignItems: 'center',
-    height: 80,
+    height: 100,
     alignSelf: 'center'
   },
   container: {
@@ -169,11 +172,17 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 15,
   },
+  jordana: {
+    color: 'grey',
+    alignSelf: 'center',
+    fontSize: 20,
+  },
   linearGradient: {
     flex: 1,
     width: '100%',
     borderTopLeftRadius: 15,
-    borderTopRightRadius: 15
+    borderTopRightRadius: 15,
+    marginTop: -10
   },
   fondo: {
     backgroundColor: 'black'

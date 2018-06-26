@@ -42,7 +42,7 @@ export default class Stadistics extends Component {
 
           <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
 
-          <Header/>
+          <Header toggle={this.toggle.bind(this)}/>
 
           <Content>
               <View style={{marginTop: 30}}>

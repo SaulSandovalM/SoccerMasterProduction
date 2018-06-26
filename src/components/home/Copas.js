@@ -7,9 +7,9 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
 
 export default class Copas extends Component {
-    static navigationOptions = {
-        header: null
-    };
+  static navigationOptions = {
+      header: null
+  };
 
     render() {
         return (
