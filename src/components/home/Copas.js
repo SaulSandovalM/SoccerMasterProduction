@@ -12,6 +12,7 @@ export default class Copas extends Component {
     };
 
     render() {
+
         return (
             <View>
                 <View style={styles.container}>

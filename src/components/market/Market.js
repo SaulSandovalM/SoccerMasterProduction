@@ -5,112 +5,129 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image, TouchableHighlight} from 'react-native';
-import {Container, Content, Button, StyleProvider, Left, Right, Body} from 'native-base';
+import {Container, Content, Button, StyleProvider, Left, Right, Body, Footer,FooterTab} from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import getTheme from '../../../native-base-theme/components';
 import material from '../../../native-base-theme/variables/material';
 import Header from '../comun/Header';
-import Footer from '../comun/Footer';
+import SideMenu from 'react-native-side-menu';
+import Menu from '../home/Menu';
+
 
 export default class Market extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      isOpen: false
+    constructor(props) {
+        super(props)
+        this.state = {
+            isOpen: false
+        }
     }
-  }
 
-  toggle(){
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
-  }
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+    }
 
-  updateMenu(isOpen){
-    this.setState({isOpen})
-  }
+    updateMenu(isOpen) {
+        this.setState({isOpen})
+    }
 
-  static navigationOptions = {
-      header: null
-  };
+    static navigationOptions = {
+        header: null
+    };
 
-  render() {
-    return (
-      <StyleProvider style={getTheme(material)}>
-        <Container style={styles.container}>
+    render() {
+        return (
+            <StyleProvider style={getTheme(material)}>
+                <Container style={styles.container}>
 
-        <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
+                    <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
 
-          <Header/>
+                        <Header/>
 
-                    <Content>
+                        <Content>
 
-                        <View style={{marginTop: 30}}>
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>1</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>PACHUCA</Text>
+                            <View style={{marginTop: 30}}>
+                                <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
+                                    <View style={styles.back}>
+                                        <Text style={styles.num}>1</Text>
+                                        <Text style={styles.space}> - </Text>
+                                        <Image style={styles.img}
+                                               source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                                        <Text style={styles.team}>PACHUCA</Text>
+                                    </View>
+                                </TouchableHighlight>
+
+                                <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
+                                    <View style={styles.back}>
+                                        <Text style={styles.num}>2</Text>
+                                        <Text style={styles.space}> - </Text>
+                                        <Image style={styles.img}
+                                               source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                                        <Text style={styles.team}>>CRUZ AZUL</Text>
+                                    </View>
+                                </TouchableHighlight>
+
+                                <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
+                                    <View style={styles.back}>
+                                        <Text style={styles.num}>3</Text>
+                                        <Text style={styles.space}> - </Text>
+                                        <Image style={styles.img}
+                                               source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                                        <Text style={styles.team}>ATLAS</Text>
+                                    </View>
+                                </TouchableHighlight>
+
+                                <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
+                                    <View style={styles.back}>
+                                        <Text style={styles.num}>4</Text>
+                                        <Text style={styles.space}> - </Text>
+                                        <Image style={styles.img}
+                                               source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                                        <Text style={styles.team}>PUEBLA</Text>
+                                    </View>
+                                </TouchableHighlight>
+
+                                <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
+                                    <View style={styles.back}>
+                                        <Text style={styles.num}>5</Text>
+                                        <Text style={styles.space}> - </Text>
+                                        <Image style={styles.img}
+                                               source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                                        <Text style={styles.team}>AMERICA</Text>
+                                    </View>
+                                </TouchableHighlight>
+
+                                <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
+                                    <View style={styles.back}>
+                                        <Text style={styles.num}>6</Text>
+                                        <Text style={styles.space}> - </Text>
+                                        <Image style={styles.img}
+                                               source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+                                        <Text style={styles.team}>CHIVAS</Text>
+                                    </View>
+                                </TouchableHighlight>
+
                             </View>
-                          </TouchableHighlight>
 
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>2</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>>CRUZ AZUL</Text>
-                            </View>
-                          </TouchableHighlight>
+                        </Content>
 
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>3</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>ATLAS</Text>
-                            </View>
-                          </TouchableHighlight>
-
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>4</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>PUEBLA</Text>
-                            </View>
-                          </TouchableHighlight>
-
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>5</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>AMERICA</Text>
-                            </View>
-                          </TouchableHighlight>
-
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>6</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>CHIVAS</Text>
-                            </View>
-                          </TouchableHighlight>
-
-                        </View>
-
-                    </Content>
-
-                    <Footer/>
+                        <Footer>
+                            <FooterTab>
+                                <Button onPress={() => this.props.navigation.push('Equipos')}>
+                                    <Icon name="soccer-ball-o" style={styles.icon}/>
+                                    <Text style={styles.color}>Equipos</Text>
+                                </Button>
+                                <Button onPress={() => this.props.navigation.push('Partidos')}>
+                                    <Icon name="bar-chart-o" style={styles.icon}/>
+                                    <Text style={styles.color}>Partidos</Text>
+                                </Button>
+                                <Button onPress={() => this.props.navigation.push('Statistics')}>
+                                    <Icon name="dollar" style={styles.icon}/>
+                                    <Text style={styles.color}>Estadísticas</Text>
+                                </Button>
+                            </FooterTab>
+                        </Footer>
 
                     </SideMenu>
 
@@ -161,15 +178,18 @@ const styles = StyleSheet.create({
         marginRight: 10
     },
     img: {
-      width: 40,
-      height: 40,
-      marginTop: -10,
-      marginRight: 5
+        width: 40,
+        height: 40,
+        marginTop: -10,
+        marginRight: 5
     },
     team: {
-      color: 'white',
-      fontSize: 20,
-      marginTop: -10,
-      width: 150
+        color: 'white',
+        fontSize: 20,
+        marginTop: -10,
+        width: 150
+    },
+    color: {
+        color: 'white'
     }
 });
