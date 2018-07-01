@@ -6,8 +6,6 @@ import Equipos from './src/components/home/Equipos';
 import Jornadas from './src/components/home/Jornadas';
 import Partidos from './src/components/home/Partidos';
 import Partido from './src/components/home/Partido';
-//import Login from './src/components/login/Login';
-//import Registro from './src/components/login/Registro';
 import MarketTeam from './src/components/market/MarketTeam';
 import Market from './src/components/market/Market';
 import MarketPersonal from './src/components/market/MarketPersonal';
@@ -18,24 +16,23 @@ import {YellowBox} from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 const Routes = createStackNavigator({
-        Copas: Copas,
-        Equipos: Equipos,
-        Partidos: Partidos,
-        MarketTeam: MarketTeam,
-        Market: Market,
-        Jornadas: Jornadas,
-        MarketPersonal: MarketPersonal,
-        Stadistics: Stadistics,
-        Partido: Partido,
-    },
-    {
-        initialRoute: 'Copas',
-    });
+  Market: Market,
+  Stadistics: Stadistics,
+  Copas: Copas,
+  Equipos: Equipos,
+  Partidos: Partidos,
+  MarketTeam: MarketTeam,
+  Jornadas: Jornadas,
+  MarketPersonal: MarketPersonal,
+  Partido: Partido,
+}, {
+  initialRoute: 'Market',
+});
 
 export default class App extends React.Component {
-    render() {
-        return (
-            <Routes/>
-        );
-    }
+  render() {
+    return (
+      <Routes />
+    );
+  }
 }
