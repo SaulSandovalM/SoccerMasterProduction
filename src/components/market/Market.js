@@ -5,12 +5,13 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image, TouchableHighlight} from 'react-native';
-import {Container, Content, Button, StyleProvider, Left, Right, Body} from 'native-base';
+import {StyleProvider, Container, Content, List, ListItem, Left, Body, Right, Thumbnail} from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import getTheme from '../../../native-base-theme/components';
 import material from '../../../native-base-theme/variables/material';
+import SideMenu from 'react-native-side-menu';
 import Header from '../comun/Header';
-import Footer from '../comun/Footer';
+import Menu from '../comun/Menu';
 
 export default class Market extends Component {
   constructor(props){
@@ -39,83 +40,108 @@ export default class Market extends Component {
       <StyleProvider style={getTheme(material)}>
         <Container style={styles.container}>
 
-        <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
+          <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
 
-          <Header/>
+          <Header toggle={this.toggle.bind(this)}/>
 
-                    <Content>
+          <Content style={styles.container}>
 
-                        <View style={{marginTop: 30}}>
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>1</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>PACHUCA</Text>
-                            </View>
-                          </TouchableHighlight>
+            <View style={styles.container}>
+              <Text style={styles.jordana}>EQUIPOS</Text>
+            </View>
 
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>2</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>>CRUZ AZUL</Text>
-                            </View>
-                          </TouchableHighlight>
+            <View style={styles.view}>
 
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>3</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>ATLAS</Text>
-                            </View>
-                          </TouchableHighlight>
+              <List style={styles.container}>
 
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>4</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>PUEBLA</Text>
-                            </View>
-                          </TouchableHighlight>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                  <Left>
+                    <Thumbnail square source={{ uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png' }} />
+                  </Left>
+                  <Body>
+                    <Text style={styles.team}>PACHUCA</Text>
+                    <Text note style={styles.color}>DESCRIPCION</Text>
+                  </Body>
+                  <Right>
+                    <Text note style={styles.color}>$100,000</Text>
+                  </Right>
+                </ListItem>
 
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>5</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>AMERICA</Text>
-                            </View>
-                          </TouchableHighlight>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                  <Left>
+                    <Thumbnail square source={{ uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/10262/10262.png' }} />
+                  </Left>
+                  <Body>
+                    <Text style={styles.team}>CHIVAS</Text>
+                    <Text note style={styles.color}>DESCRIPCION</Text>
+                  </Body>
+                  <Right>
+                    <Text note style={styles.color}>$100,000</Text>
+                  </Right>
+                </ListItem>
 
-                          <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>
-                            <View style={styles.back}>
-                                <Text style={styles.num}>6</Text>
-                                <Text style={styles.space}> - </Text>
-                                <Image style={styles.img}
-                                       source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                                <Text style={styles.team}>CHIVAS</Text>
-                            </View>
-                          </TouchableHighlight>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                  <Left>
+                    <Thumbnail square source={{ uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3.png' }} />
+                  </Left>
+                  <Body>
+                    <Text style={styles.team}>BARCELONA</Text>
+                    <Text note style={styles.color}>DESCRIPCION</Text>
+                  </Body>
+                  <Right>
+                    <Text note style={styles.color}>$100,000</Text>
+                  </Right>
+                </ListItem>
 
-                        </View>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                  <Left>
+                    <Thumbnail square source={{ uri: 'https://i.pinimg.com/originals/c1/5e/6d/c15e6d719debe4b3ed589c06045655dc.png' }} />
+                  </Left>
+                  <Body>
+                    <Text style={styles.team}>REAL MADRID</Text>
+                    <Text notestyle={styles.color}>DESCRIPCION</Text>
+                  </Body>
+                  <Right>
+                    <Text note style={styles.color}>$100,000</Text>
+                  </Right>
+                </ListItem>
 
-                    </Content>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                  <Left>
+                    <Thumbnail square source={{ uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4246.png' }} />
+                  </Left>
+                  <Body>
+                    <Text style={styles.team}>PUEBLA</Text>
+                    <Text note style={styles.color}>DESCRIPCION</Text>
+                  </Body>
+                  <Right>
+                    <Text note style={styles.color}>$100,000</Text>
+                  </Right>
+                </ListItem>
 
-                    <Footer/>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                  <Left>
+                    <Thumbnail square source={{uri: 'http://4.bp.blogspot.com/_aY6uWfdpKTw/ShQmQ-kyVsI/AAAAAAAABc4/07hQ17vHBUI/s400/%C3%81guilas+del+Am%C3%A9rica+%7C+Logo.png'}} />
+                  </Left>
+                  <Body>
+                    <Text style={styles.team}>AMARICA</Text>
+                    <Text note style={styles.color}>DESCRIPCION</Text>
+                  </Body>
+                  <Right>
+                    <Text note style={styles.color}>$100,000</Text>
+                  </Right>
+                </ListItem>
 
-                    </SideMenu>
+              </List>
 
-                </Container>
-            </StyleProvider>
+            </View>
+
+          </Content>
+
+          </SideMenu>
+
+          </Container>
+        </StyleProvider>
         );
     }
 }
@@ -137,39 +163,18 @@ const styles = StyleSheet.create({
         fontSize: 15,
         marginTop: 15
     },
-    back: {
-        alignItems: 'center',
-        backgroundColor: '#9F81F7',
-        width: '100%',
-        height: 100,
-        flexDirection: 'row',
-        borderTopLeftRadius: 15,
-        borderTopRightRadius: 15
-    },
-    num: {
-        color: 'white',
-        fontSize: 20,
-        marginTop: -10,
-        marginLeft: 10,
-        marginRight: 5
-    },
-    space: {
-        color: 'white',
-        fontSize: 20,
-        marginTop: -10,
-        marginLeft: 5,
-        marginRight: 10
-    },
-    img: {
-      width: 40,
-      height: 40,
-      marginTop: -10,
-      marginRight: 5
-    },
     team: {
-      color: 'white',
+        color: 'white'
+    },
+    jordana: {
+      color: 'grey',
+      alignSelf: 'center',
       fontSize: 20,
-      marginTop: -10,
-      width: 150
+    },
+    view: {
+      marginTop: 10
+    },
+    color: {
+      color: 'grey'
     }
 });

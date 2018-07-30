@@ -75,13 +75,6 @@ const styles = StyleSheet.create({
   viewPager: {
     flex: 1,
   },
-  backgroundVideo: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-  },
   buttonStyle: {
     alignSelf: 'center',
     marginTop: 20,

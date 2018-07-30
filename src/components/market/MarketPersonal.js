@@ -20,10 +20,10 @@ export default class MarketPersonal extends Component {
           <StyleProvider style={getTheme(material)}>
           <Container style={styles.container}>
 
-              <Header style={styles.header}>
+              <Header>
                   <Left>
                       <Button transparent>
-                          <Icon name='navicon' style={styles.icon}/>
+                          <Icon name='chevron-left' style={styles.icon}/>
                       </Button>
                   </Left>
                   <Body>
@@ -35,88 +35,145 @@ export default class MarketPersonal extends Component {
 
               <Content>
 
-                <View style={{flexDirection: 'row', width: '100%'}}>
+                <View style={styles.row}>
 
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                         <View>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>Nombre</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>$ 10,000</Text>
+                    </View>
                   </View>
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
-                  </View>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                      <View>
+                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
+                    </View>
+                </View>
 
                 </View>
 
-                <View style={{flexDirection: 'row', width: '100%'}}>
+                <View style={styles.row}>
 
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                         <View>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>Nombre</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>$ 10,000</Text>
+                    </View>
                   </View>
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
-                  </View>
-
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                      <View>
+                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
+                    </View>
                 </View>
 
-                <View style={{flexDirection: 'row', width: '100%'}}>
+                </View>
+                <View style={styles.row}>
 
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                         <View>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>Nombre</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>$ 10,000</Text>
+                    </View>
                   </View>
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
-                  </View>
-
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                      <View>
+                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
+                    </View>
                 </View>
 
-                <View style={{flexDirection: 'row', width: '100%'}}>
+                </View>
+                <View style={styles.row}>
 
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                         <View>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>Nombre</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>$ 10,000</Text>
+                    </View>
                   </View>
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
-                  </View>
-
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                      <View>
+                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
+                    </View>
                 </View>
 
-                <View style={{flexDirection: 'row', width: '100%'}}>
+                </View>
+                <View style={styles.row}>
 
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                         <View>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>Nombre</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>$ 10,000</Text>
+                    </View>
                   </View>
-                  <View style={{width: '50%', height: 150, backgroundColor: 'red'}}>
-                    <Image style={{width: '100%', height: 100}}
-                           source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
-                    <Text>Nombre</Text>
-                    <Text>$ 10,000</Text>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                      <View>
+                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
+                    </View>
+                </View>
+
+                </View>
+                <View style={styles.row}>
+
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                         <View>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>Nombre</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>$ 10,000</Text>
+                    </View>
                   </View>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                      <View>
+                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
+                    </View>
+                </View>
+
+                </View>
+                <View style={styles.row}>
+
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                         <View>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>Nombre</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>$ 10,000</Text>
+                    </View>
+                  </View>
+                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                    <Image style={{width: '100%', height: 200}}
+                           source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
+                      <View>
+                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
+                    </View>
+                </View>
 
                 </View>
 
@@ -130,10 +187,7 @@ export default class MarketPersonal extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'black'
-    },
-    header: {
-        marginTop: 24
+        backgroundColor: 'white'
     },
     icon: {
         color: 'white',
@@ -179,5 +233,9 @@ const styles = StyleSheet.create({
       fontSize: 20,
       marginTop: -10,
       width: 150
+    },
+    row: {
+      flexDirection: 'row',
+      width: '100%'
     }
 });
