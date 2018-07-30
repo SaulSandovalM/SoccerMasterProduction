@@ -18,7 +18,6 @@ export default class Index extends Component {
             nuevo: '',
             lista: []
         }
-
     }
 
     static navigationOptions = {
@@ -57,14 +56,11 @@ export default class Index extends Component {
         return (
             <Container>
                 <ImageBackground source={img3} style={styles.viewPager}>
-
                     <Content>
-
                         <ListComponent
                             lista={this.state.lista}
                             changeDone={this.changeDone}
                         />
-
                     </Content>
                 </ImageBackground>
             </Container>
