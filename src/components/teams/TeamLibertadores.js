@@ -1,8 +1,3 @@
-/**
- * SoccerMaster
- * @HackSite
- */
-
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
 
@@ -21,16 +16,16 @@ export default class TeamLibertadores extends Component {
 
         <ScrollView>
           <View style={styles.view}>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosLibertadores')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'http://www.caratulasylogos.com/sites/default/files/arminia_bielefeld.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosLibertadores')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://www.ligafutbol.net/wp-content/2009/04/escudo-madrid.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosLibertadores')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://ugc.kn3.net/i/origin/http://lh4.ggpht.com/_gHhBxs3JECA/TO7EInnjZhI/AAAAAAAAALc/dhysgzqUE_I/Arsenal.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosLibertadores')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://2.bp.blogspot.com/-DKUYPdrFp-A/V4083cnMsPI/AAAAAAAAFxA/2TLsXUyui4Iu29RaOafaAaR_4_-iQQ71ACLcB/s1600/BocaJuniors.pngg'}}/>
             </TouchableHighlight>
           </View>
@@ -45,7 +40,8 @@ export default class TeamLibertadores extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black'
+    backgroundColor: 'black',
+    flex: 1
   },
   text1: {
     fontSize: 20,

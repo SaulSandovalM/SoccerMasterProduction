@@ -37,20 +37,20 @@ export default class MarketPersonal extends Component {
 
                 <View style={styles.row}>
 
-                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                  <View style={{width: '48%', height: 255, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey', margin: 3}}>
                     <Image style={{width: '100%', height: 200}}
                            source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
                          <View>
-                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>Nombre</Text>
-                       <Text style={{color: 'black', fontSize: 20, marginLeft: 10}}>$ 10,000</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 40}}>Nombre</Text>
+                       <Text style={{color: 'black', fontSize: 20, marginLeft: 40}}>$ 10,000</Text>
                     </View>
                   </View>
-                  <View style={{width: '48%', height: 250, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey'}}>
+                  <View style={{width: '48%', height: 255, backgroundColor: 'white', borderRadius: 25, borderWidth: 1, borderColor: 'grey',  margin: 3}}>
                     <Image style={{width: '100%', height: 200}}
                            source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
                       <View>
-                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
-                        <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
+                        <Text style={{color: 'black', fontSize: 20, marginLeft: 40}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20, marginLeft: 40}}>$ 10,000</Text>
                     </View>
                 </View>
 
@@ -170,7 +170,7 @@ export default class MarketPersonal extends Component {
                     <Image style={{width: '100%', height: 200}}
                            source={{uri: 'https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/m/mes/large/15167.png'}}/>
                       <View>
-                        <Text style={{color: 'black', fontSize: 20}}>Nombre</Text>
+                        <Text style={{color: 'black', fontSize: 20, }}>Nombre</Text>
                         <Text style={{color: 'black', fontSize: 20}}>$ 10,000</Text>
                     </View>
                 </View>
@@ -236,6 +236,7 @@ const styles = StyleSheet.create({
     },
     row: {
       flexDirection: 'row',
-      width: '100%'
+      width: '100%',
+      margin: 4
     }
 });

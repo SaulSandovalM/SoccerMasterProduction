@@ -42,7 +42,7 @@ export default class Copas extends Component {
               <TouchableHighlight onPress={() => this.props.navigation.push('TeamAfricana')} style={styles.touch}>
                 <Image style={styles.img} source={{uri: 'http://www.planeta7.com.mx/imagenes/copa%20africana.jpg'}}/>
               </TouchableHighlight>
-              <TouchableHighlight onPress={() => this.props.navigation.push('TeamArgertina')} style={styles.touch}>
+              <TouchableHighlight onPress={() => this.props.navigation.push('TeamArgentina')} style={styles.touch}>
                 <Image style={styles.img} source={{uri: 'http://www.planeta7.com.mx/imagenes/copa%20argentina.jpg'}}/>
               </TouchableHighlight>
             </View>

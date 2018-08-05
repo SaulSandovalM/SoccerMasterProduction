@@ -1,8 +1,3 @@
-/**
- * SoccerMaster
- * @HackSite
- */
-
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
 import {Container, Content, Button, StyleProvider, Left, Right, Body} from 'native-base';
@@ -14,7 +9,7 @@ import Header from '../comun/Header';
 import SideMenu from 'react-native-side-menu';
 import Menu from '../comun/Menu';
 
-export default class Partidos extends Component {
+export default class PartidosAmerica extends Component {
   constructor(props){
     super(props)
     this.state = {

@@ -1,8 +1,3 @@
-/**
- * SoccerMaster
- * @HackSite
- */
-
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
 
@@ -21,16 +16,16 @@ export default class TeamSudamericana extends Component {
 
         <ScrollView>
           <View style={styles.view}>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosSudamericana')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3981.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosSudamericana')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://es.onefootball.com/wp-content/uploads/sites/12/2017/06/Necaxa.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosSudamericana')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4248.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosSudamericana')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://vignette.wikia.nocookie.net/futbol/images/3/3a/FC_Barcelona_Escudo.png/revision/latest?cb=20150709184757'}}/>
             </TouchableHighlight>
           </View>
@@ -45,7 +40,8 @@ export default class TeamSudamericana extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black'
+    backgroundColor: 'black',
+    flex: 1
   },
   text1: {
     fontSize: 20,

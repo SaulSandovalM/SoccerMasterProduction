@@ -1,8 +1,3 @@
-/**
- * SoccerMaster
- * @HackSite
- */
-
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
 
@@ -21,16 +16,16 @@ export default class TeamOro extends Component {
 
         <ScrollView>
           <View style={styles.view}>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosOro')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosOro')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3678.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosOro')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/02/a5/8b/02a58bd2d8fbf380e1a9fe9d901e5a7d.png'}}/>
             </TouchableHighlight>
-            <TouchableHighlight onPress={() => this.props.navigation.push('Partidos')} style={styles.touch}>
+            <TouchableHighlight onPress={() => this.props.navigation.push('PartidosOro')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Escudo_del_Cruz_Azul_AC.svg/1024px-Escudo_del_Cruz_Azul_AC.svg.png'}}/>
             </TouchableHighlight>
           </View>
@@ -45,7 +40,8 @@ export default class TeamOro extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black'
+    backgroundColor: 'black',
+    flex: 1
   },
   text1: {
     fontSize: 20,

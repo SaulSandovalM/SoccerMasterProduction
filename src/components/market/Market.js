@@ -60,7 +60,7 @@ export default class Market extends Component {
                   </Left>
                   <Body>
                     <Text style={styles.team}>PACHUCA</Text>
-                    <Text note style={styles.color}>DESCRIPCION</Text>
+                    <Text note style={styles.color}>PLANTILLA</Text>
                   </Body>
                   <Right>
                     <Text note style={styles.color}>$100,000</Text>
@@ -73,7 +73,7 @@ export default class Market extends Component {
                   </Left>
                   <Body>
                     <Text style={styles.team}>CHIVAS</Text>
-                    <Text note style={styles.color}>DESCRIPCION</Text>
+                    <Text note style={styles.color}>PLANTILLA</Text>
                   </Body>
                   <Right>
                     <Text note style={styles.color}>$100,000</Text>
@@ -86,7 +86,7 @@ export default class Market extends Component {
                   </Left>
                   <Body>
                     <Text style={styles.team}>BARCELONA</Text>
-                    <Text note style={styles.color}>DESCRIPCION</Text>
+                    <Text note style={styles.color}>PLANTILLA</Text>
                   </Body>
                   <Right>
                     <Text note style={styles.color}>$100,000</Text>
@@ -99,7 +99,7 @@ export default class Market extends Component {
                   </Left>
                   <Body>
                     <Text style={styles.team}>REAL MADRID</Text>
-                    <Text notestyle={styles.color}>DESCRIPCION</Text>
+                    <Text notestyle={styles.color}>PLANTILLA</Text>
                   </Body>
                   <Right>
                     <Text note style={styles.color}>$100,000</Text>
@@ -112,7 +112,7 @@ export default class Market extends Component {
                   </Left>
                   <Body>
                     <Text style={styles.team}>PUEBLA</Text>
-                    <Text note style={styles.color}>DESCRIPCION</Text>
+                    <Text note style={styles.color}>PLANTILLA</Text>
                   </Body>
                   <Right>
                     <Text note style={styles.color}>$100,000</Text>
@@ -125,7 +125,7 @@ export default class Market extends Component {
                   </Left>
                   <Body>
                     <Text style={styles.team}>AMARICA</Text>
-                    <Text note style={styles.color}>DESCRIPCION</Text>
+                    <Text note style={styles.color}>PLANTILLA</Text>
                   </Body>
                   <Right>
                     <Text note style={styles.color}>$100,000</Text>
