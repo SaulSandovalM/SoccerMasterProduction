@@ -1,8 +1,3 @@
-/**
- * SoccerMaster
- * @HackSite
- */
-
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image, TouchableHighlight} from 'react-native';
 import {StyleProvider, Container, Content, List, ListItem, Left, Body, Right, Thumbnail} from 'native-base';
@@ -13,7 +8,7 @@ import SideMenu from 'react-native-side-menu';
 import Header from '../comun/Header';
 import Menu from '../comun/Menu';
 
-export default class Market extends Component {
+export default class MarketFemenil extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -32,12 +27,13 @@ export default class Market extends Component {
   }
 
   static navigationOptions = {
-      header: null
+    header: null
   };
 
   render() {
     return (
       <StyleProvider style={getTheme(material)}>
+
         <Container style={styles.container}>
 
           <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
@@ -54,7 +50,7 @@ export default class Market extends Component {
 
               <List style={styles.container}>
 
-                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonalFemenil')}>
                   <Left>
                     <Thumbnail square source={{ uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png' }} />
                   </Left>
@@ -67,7 +63,7 @@ export default class Market extends Component {
                   </Right>
                 </ListItem>
 
-                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonalFemenil')}>
                   <Left>
                     <Thumbnail square source={{ uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/10262/10262.png' }} />
                   </Left>
@@ -80,7 +76,7 @@ export default class Market extends Component {
                   </Right>
                 </ListItem>
 
-                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonalFemenil')}>
                   <Left>
                     <Thumbnail square source={{ uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3.png' }} />
                   </Left>
@@ -93,7 +89,7 @@ export default class Market extends Component {
                   </Right>
                 </ListItem>
 
-                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonalFemenil')}>
                   <Left>
                     <Thumbnail square source={{ uri: 'https://i.pinimg.com/originals/c1/5e/6d/c15e6d719debe4b3ed589c06045655dc.png' }} />
                   </Left>
@@ -106,7 +102,7 @@ export default class Market extends Component {
                   </Right>
                 </ListItem>
 
-                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonalFemenil')}>
                   <Left>
                     <Thumbnail square source={{ uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4246.png' }} />
                   </Left>
@@ -119,7 +115,7 @@ export default class Market extends Component {
                   </Right>
                 </ListItem>
 
-                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonal')}>
+                <ListItem avatar onPress={() => this.props.navigation.push('MarketPersonalFemenil')}>
                   <Left>
                     <Thumbnail square source={{uri: 'http://4.bp.blogspot.com/_aY6uWfdpKTw/ShQmQ-kyVsI/AAAAAAAABc4/07hQ17vHBUI/s400/%C3%81guilas+del+Am%C3%A9rica+%7C+Logo.png'}} />
                   </Left>
@@ -140,41 +136,41 @@ export default class Market extends Component {
 
           </SideMenu>
 
-          </Container>
-        </StyleProvider>
-        );
-    }
+        </Container>
+      </StyleProvider>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'black'
-    },
-    header: {
-        marginTop: 24
-    },
-    icon: {
-        color: 'white',
-        fontSize: 20
-    },
-    fecha: {
-        color: 'grey',
-        alignSelf: 'center',
-        fontSize: 15,
-        marginTop: 15
-    },
-    team: {
-        color: 'white'
-    },
-    jordana: {
-      color: 'grey',
-      alignSelf: 'center',
-      fontSize: 20,
-    },
-    view: {
-      marginTop: 10
-    },
-    color: {
-      color: 'grey'
-    }
+  container: {
+    backgroundColor: 'black'
+  },
+  header: {
+    marginTop: 24
+  },
+  icon: {
+    color: 'white',
+    fontSize: 20
+  },
+  fecha: {
+    color: 'grey',
+    alignSelf: 'center',
+    fontSize: 15,
+    marginTop: 15
+  },
+  team: {
+    color: 'white'
+  },
+  jordana: {
+    color: 'grey',
+    alignSelf: 'center',
+    fontSize: 20,
+  },
+  view: {
+    marginTop: 10
+  },
+  color: {
+    color: 'grey'
+  }
 });

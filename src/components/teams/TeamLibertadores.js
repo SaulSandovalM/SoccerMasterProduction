@@ -17,16 +17,16 @@ export default class TeamLibertadores extends Component {
         <ScrollView>
           <View style={styles.view}>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosLibertadores')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'http://www.caratulasylogos.com/sites/default/files/arminia_bielefeld.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://www.seeklogo.net/wp-content/uploads/2013/02/federacion-holandesa-de-futbol-logo-vector-400x400.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosLibertadores')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://www.ligafutbol.net/wp-content/2009/04/escudo-madrid.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/71/8d/60/718d6015e5ad2ffdf51b57023ed401b2.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosLibertadores')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://ugc.kn3.net/i/origin/http://lh4.ggpht.com/_gHhBxs3JECA/TO7EInnjZhI/AAAAAAAAALc/dhysgzqUE_I/Arsenal.png'}}/>
+              <Image style={styles.img} source={{uri: 'http://estaticos01.marca.com/deporte/futbol/copa-america/2016/img/escudos/mexico.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosLibertadores')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://2.bp.blogspot.com/-DKUYPdrFp-A/V4083cnMsPI/AAAAAAAAFxA/2TLsXUyui4Iu29RaOafaAaR_4_-iQQ71ACLcB/s1600/BocaJuniors.pngg'}}/>
+              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/30/bd/02/30bd02b1e68ef1d01500add7b847f969.png'}}/>
             </TouchableHighlight>
           </View>
 

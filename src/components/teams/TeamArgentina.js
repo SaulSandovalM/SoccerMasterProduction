@@ -17,16 +17,16 @@ export default class TeamArgentina extends Component {
         <ScrollView>
           <View style={styles.view}>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosArgentina')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'http://www.caratulasylogos.com/sites/default/files/arminia_bielefeld.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Escudo_del_Club_Atl%C3%A9tico_Boca_Juniors.svg/887px-Escudo_del_Club_Atl%C3%A9tico_Boca_Juniors.svg.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosArgentina')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://www.ligafutbol.net/wp-content/2009/04/escudo-madrid.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://vignette.wikia.nocookie.net/fifa/images/f/f1/River_Plate.png/revision/latest?cb=20180402150450&path-prefix=es'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosArgentina')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://ugc.kn3.net/i/origin/http://lh4.ggpht.com/_gHhBxs3JECA/TO7EInnjZhI/AAAAAAAAALc/dhysgzqUE_I/Arsenal.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Racing_Club_%282014%29.svg/1200px-Racing_Club_%282014%29.svg.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosArgentina')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://2.bp.blogspot.com/-DKUYPdrFp-A/V4083cnMsPI/AAAAAAAAFxA/2TLsXUyui4Iu29RaOafaAaR_4_-iQQ71ACLcB/s1600/BocaJuniors.pngg'}}/>
+              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Escudo_del_Club_Atl%C3%A9tico_Independiente.svg/987px-Escudo_del_Club_Atl%C3%A9tico_Independiente.svg.png'}}/>
             </TouchableHighlight>
           </View>
 

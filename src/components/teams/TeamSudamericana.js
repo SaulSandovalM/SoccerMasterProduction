@@ -23,10 +23,10 @@ export default class TeamSudamericana extends Component {
               <Image style={styles.img} source={{uri: 'https://es.onefootball.com/wp-content/uploads/sites/12/2017/06/Necaxa.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosSudamericana')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4248.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/bf/64/af/bf64aff2de702c1c55022587a868731b.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosSudamericana')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://vignette.wikia.nocookie.net/futbol/images/3/3a/FC_Barcelona_Escudo.png/revision/latest?cb=20150709184757'}}/>
+              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/26/45/cd/2645cd2e121744d72a92651fd6178d4d.png'}}/>
             </TouchableHighlight>
           </View>
 

@@ -21,15 +21,37 @@ import PartidosOro from './src/components/matches/PartidosOro';
 import PartidosSudamericana from './src/components/matches/PartidosSudamericana';
 import Partido from './src/components/matches/Partido';
 import MarketTeam from './src/components/market/MarketTeam';
-import Market from './src/components/market/Market';
-import MarketPersonal from './src/components/market/MarketPersonal';
-import Stadistics from './src/components/stadistics/Stadistics';
-//import Inicio from './src/components/welcome/AfterFirstTime';
+import StadisticsAfricana from './src/components/stadistics/StadisticsAfricana';
+import StadisticsAmerica from './src/components/stadistics/StadisticsAmerica';
+import StadisticsArgentina from './src/components/stadistics/StadisticsArgentina';
+import StadisticsConfederaciones from './src/components/stadistics/StadisticsConfederaciones';
+import StadisticsFemenil from './src/components/stadistics/StadisticsFemenil';
+import StadisticsLibertadores from './src/components/stadistics/StadisticsLibertadores';
+import StadisticsOro from './src/components/stadistics/StadisticsOro';
+import StadisticsRey from './src/components/stadistics/StadisticsRey';
+import StadisticsSudamericana from './src/components/stadistics/StadisticsSudamericana';
+import MarketAfricana from './src/components/market/MarketAfricana';
+import MarketAmerica from './src/components/market/MarketAmerica';
+import MarketArgentina from './src/components/market/MarketArgentina';
+import MarketConfederaciones from './src/components/market/MarketConfederaciones';
+import MarketFemenil from './src/components/market/MarketFemenil';
+import MarketLibertadores from './src/components/market/MarketLibertadores';
+import MarketOro from './src/components/market/MarketOro';
+import MarketRey from './src/components/market/MarketRey';
+import MarketSudamericana from './src/components/market/MarketSudamericana';
+import MarketPersonalAfricana from './src/components/market/MarketPersonalAfricana';
+import MarketPersonalAmerica from './src/components/market/MarketPersonalAmerica';
+import MarketPersonalArgentina from './src/components/market/MarketPersonalArgentina';
+import MarketPersonalConfederaciones from './src/components/market/MarketPersonalConfederaciones';
+import MarketPersonalFemenil from './src/components/market/MarketPersonalFemenil';
+import MarketPersonalLibertadores from './src/components/market/MarketPersonalLibertadores';
+import MarketPersonalOro from './src/components/market/MarketPersonalOro';
+import MarketPersonalRey from './src/components/market/MarketPersonalRey';
+import MarketPersonalSudamericana from './src/components/market/MarketPersonalSudamericana';
+import Thrashed from './src/components/thrashed/Thrashed';
 
 const Routes = createStackNavigator({
   Copas: Copas,
-  Market: Market,
-  Stadistics: Stadistics,
   TeamAfricana: TeamAfricana,
   TeamAmerica: TeamAmerica,
   TeamArgentina: TeamArgentina,
@@ -39,7 +61,6 @@ const Routes = createStackNavigator({
   TeamOro: TeamOro,
   TeamRey: TeamRey,
   TeamSudamericana: TeamSudamericana,
-  Market: Market,
   PartidosRey: PartidosRey,
   PartidosAmerica: PartidosAmerica,
   PartidosOro: PartidosOro,
@@ -49,8 +70,34 @@ const Routes = createStackNavigator({
   PartidosConfederaciones: PartidosConfederaciones,
   PartidosSudamericana: PartidosSudamericana,
   PartidosFemenil: PartidosFemenil,
-  MarketTeam: MarketTeam,
-  MarketPersonal: MarketPersonal,
+  StadisticsAfricana: StadisticsAfricana,
+  StadisticsAmerica: StadisticsAmerica,
+  StadisticsArgentina: StadisticsArgentina,
+  StadisticsConfederaciones: StadisticsConfederaciones,
+  StadisticsFemenil: StadisticsFemenil,
+  StadisticsLibertadores: StadisticsLibertadores,
+  StadisticsOro: StadisticsOro,
+  StadisticsRey: StadisticsRey,
+  StadisticsSudamericana: StadisticsSudamericana,
+  MarketAfricana: MarketAfricana,
+  MarketAmerica: MarketAmerica,
+  MarketArgentina: MarketArgentina,
+  MarketConfederaciones: MarketConfederaciones,
+  MarketFemenil: MarketFemenil,
+  MarketLibertadores: MarketLibertadores,
+  MarketOro: MarketOro,
+  MarketRey: MarketRey,
+  MarketSudamericana: MarketSudamericana,
+  MarketPersonalAfricana: MarketPersonalAfricana,
+  MarketPersonalAmerica: MarketPersonalAmerica,
+  MarketPersonalArgentina: MarketPersonalArgentina,
+  MarketPersonalConfederaciones: MarketPersonalConfederaciones,
+  MarketPersonalFemenil: MarketPersonalFemenil,
+  MarketPersonalLibertadores: MarketPersonalLibertadores,
+  MarketPersonalOro: MarketPersonalOro,
+  MarketPersonalRey: MarketPersonalRey,
+  MarketPersonalSudamericana: MarketPersonalSudamericana,
+  Thrashed: Thrashed,
   Partido: Partido,
 }, {
   initialRoute: 'Copas',

@@ -17,16 +17,16 @@ export default class TeamConfederaciones extends Component {
         <ScrollView>
           <View style={styles.view}>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosConfederaciones')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/97/2d/bf/972dbff4aca945be528fc22fae7ccd1d.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://seeklogo.com/images/P/pumas-unam-logo-8BDD2BD14E-seeklogo.com.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosConfederaciones')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://www.deportetotal.mx/wp-content/uploads/2017/04/puebla.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://seeklogo.com/images/T/tigres-del-universitario-de-nuevo-leon-logo-C5E054050C-seeklogo.com.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosConfederaciones')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Escudo_Millos_70_a%C3%B1os_2.svg/1200px-Escudo_Millos_70_a%C3%B1os_2.svg.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/3106/3106.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosConfederaciones')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/3294/3294.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/2/28/CF_Monterrey_Crest.png'}}/>
             </TouchableHighlight>
           </View>
 

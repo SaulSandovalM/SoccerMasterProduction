@@ -17,10 +17,10 @@ export default class TeamRey extends Component {
         <ScrollView>
           <View style={styles.view}>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosRey')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/97/2d/bf/972dbff4aca945be528fc22fae7ccd1d.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Canadian_Soccer_Association_logo.svg/1200px-Canadian_Soccer_Association_logo.svg.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosRey')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://www.deportetotal.mx/wp-content/uploads/2017/04/puebla.png'}}/>
+              <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4249.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosRey')} style={styles.touch}>
               <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Escudo_Millos_70_a%C3%B1os_2.svg/1200px-Escudo_Millos_70_a%C3%B1os_2.svg.png'}}/>

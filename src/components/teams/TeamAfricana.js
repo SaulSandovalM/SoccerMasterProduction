@@ -17,16 +17,16 @@ export default class TeamAfricana extends Component {
         <ScrollView>
           <View style={styles.view}>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosAfricana')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3981.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Ghana_Football_Association_logo.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosAfricana')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://es.onefootball.com/wp-content/uploads/sites/12/2017/06/Necaxa.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://images.vexels.com/media/users/3/152421/isolated/preview/8281001357d2cefc870c6c315e89132a-logotipo-del-equipo-de-ftbol-de-egipto-by-vexels.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosAfricana')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4248.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://clipart.info/images/ccovers/1503438048nigeria-football-logo-png.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosAfricana')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://vignette.wikia.nocookie.net/futbol/images/3/3a/FC_Barcelona_Escudo.png/revision/latest?cb=20150709184757'}}/>
+              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/5a/74/0c/5a740cc3d15c612e19f0573ef6835408.png'}}/>
             </TouchableHighlight>
           </View>
 

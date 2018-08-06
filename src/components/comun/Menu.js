@@ -1,80 +1,75 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Dimensions, StyleSheet, View, Text, TouchableHighlight} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Button} from 'native-base';
+import {NavigationActions} from 'react-navigation';
 
-const {width, height} = Dimensions.get('window')
+const {width, height} = Dimensions.get('window');
 
-class Menu extends Component {
-    render(){
-        return (
-            <View style={styles.menu}>
+export default class Menu extends React.Component {
+  static navigationOptions = {
+    header: null
+  };
 
-              <View>
-                <Text style={styles.section}>PARTIDOS</Text>
-              </View>
+  render(){
+    return (
+        <View style={styles.menu}>
 
-              <View>
-                <TouchableHighlight>
-                  <Button style={styles.Button2} onPress={() => this.props.navigation.push('Jornadas')}>
-                    <Icon name="soccer-ball-o" style={styles.icon}/>
-                    <Text style={styles.text}>JORNADA</Text>
-                    <Icon name="chevron-right" style={styles.icon}/>
-                  </Button>
-                </TouchableHighlight>
-              </View>
+          <View>
+            <Text style={styles.section}>PARTIDOS</Text>
+          </View>
 
-              <View>
-                <Text style={styles.section}>ESTADISTICAS</Text>
-              </View>
+          <View>
+            <TouchableHighlight>
+              <Button style={styles.Button2} onPress={() => this.props.navigation.push('Jornadas')}>
+                <Icon name="soccer-ball-o" style={styles.icon}/>
+                <Text style={styles.text}>JORNADA</Text>
+                <Icon name="chevron-right" style={styles.icon}/>
+              </Button>
+            </TouchableHighlight>
+          </View>
 
-              <View>
-                <TouchableHighlight>
-                  <Button style={styles.Button1} onPress={() => this.props.navigation.push('Stadistics')}>
-                    <Icon name="th-list" style={styles.icon2}/>
-                    <Text style={styles.text2}>ESTADISTICAS</Text>
-                    <Icon name="chevron-right" style={styles.icon2}/>
-                  </Button>
-                </TouchableHighlight>
-              </View>
+          <View>
+            <Text style={styles.section}>ESTADISTICAS</Text>
+          </View>
 
-              <View>
-                <TouchableHighlight>
-                  <Button style={styles.Button1}>
-                    <Icon name="th-list" style={styles.icon2}/>
-                    <Text style={styles.text2}>TABLA DE POSICIONES</Text>
-                    <Icon name="chevron-right" style={styles.icon2}/>
-                  </Button>
-                </TouchableHighlight>
-              </View>
+          <View>
+            <TouchableHighlight>
+              <Button style={styles.Button1} onPress={() => this.props.navigation.push('Stadistics')}>
+                <Icon name="th-list" style={styles.icon2}/>
+                <Text style={styles.text2}>POSICIONES</Text>
+                <Icon name="chevron-right" style={styles.icon2}/>
+              </Button>
+            </TouchableHighlight>
+          </View>
 
-              <View>
-                <TouchableHighlight>
-                  <Button style={styles.Button1}>
-                    <Icon name="bar-chart" style={styles.icon2}/>
-                    <Text style={styles.text2}>TABLA DE GOLEO</Text>
-                    <Icon name="chevron-right" style={styles.icon2}/>
-                  </Button>
-                </TouchableHighlight>
-              </View>
+          <View>
+            <TouchableHighlight>
+              <Button style={styles.Button1}>
+                <Icon name="bar-chart" style={styles.icon2}/>
+                <Text style={styles.text2}>TABLA DE GOLEO</Text>
+                <Icon name="chevron-right" style={styles.icon2}/>
+              </Button>
+            </TouchableHighlight>
+          </View>
 
-              <View>
-                <Text style={styles.section}>MERCADO</Text>
-              </View>
+          <View>
+            <Text style={styles.section}>MERCADO</Text>
+          </View>
 
-              <View>
-                <TouchableHighlight>
-                  <Button style={styles.Button3} onPress={() => navigation.push('Market')}>
-                    <Icon name="dollar" style={styles.icon}/>
-                    <Text style={styles.text}>MERCADO DE EQUIPOS</Text>
-                    <Icon name="chevron-right" style={styles.icon}/>
-                  </Button>
-                </TouchableHighlight>
-              </View>
+          <View>
+            <TouchableHighlight>
+              <Button style={styles.Button3} onPress={() => navigation('Market')}>
+                <Icon name="dollar" style={styles.icon}/>
+                <Text style={styles.text}>MERCADO DE EQUIPOS</Text>
+                <Icon name="chevron-right" style={styles.icon}/>
+              </Button>
+            </TouchableHighlight>
+          </View>
 
-            </View>
-        )
-    }
+        </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -125,5 +120,3 @@ const styles = StyleSheet.create({
     backgroundColor: 'red'
   }
 })
-
-export default Menu

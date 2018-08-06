@@ -17,16 +17,16 @@ export default class TeamOro extends Component {
         <ScrollView>
           <View style={styles.view}>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosOro')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_de_la_Federaci%C3%B3n_de_F%C3%BAtbol_de_Chile.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosOro')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3678.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/97/2d/bf/972dbff4aca945be528fc22fae7ccd1d.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosOro')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/02/a5/8b/02a58bd2d8fbf380e1a9fe9d901e5a7d.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/7c/0d/fd/7c0dfd384a11734ff1bc862f139c7292.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosOro')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Escudo_del_Cruz_Azul_AC.svg/1024px-Escudo_del_Cruz_Azul_AC.svg.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://4.bp.blogspot.com/-LGLSdcViu5Q/WVvDAEW-zkI/AAAAAAABLc4/SVYr8Th0Xcwx7s8Y2OBoWfQrVTJvPALXQCLcBGAs/s1600/Hebei%2BChina%2BFortune%2BFC.png'}}/>
             </TouchableHighlight>
           </View>
 

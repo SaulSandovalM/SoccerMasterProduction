@@ -17,16 +17,16 @@ export default class TeamFemenil extends Component {
         <ScrollView>
           <View style={styles.view}>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosFemenil')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/9a/1d/8d/9a1d8d138b1fccc40c366468eb902437.png'}}/>
+              <Image style={styles.img} source={{uri: 'http://pngimg.com/uploads/fcb_logo/fcb_logo_PNG25.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosFemenil')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3678.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/bd/dd/f7/bdddf7694eb71ca5b5abc01a74629df7.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosFemenil')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://i.pinimg.com/originals/02/a5/8b/02a58bd2d8fbf380e1a9fe9d901e5a7d.png'}}/>
+              <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/1881.png'}}/>
             </TouchableHighlight>
             <TouchableHighlight onPress={() => this.props.navigation.push('PartidosFemenil')} style={styles.touch}>
-              <Image style={styles.img} source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Escudo_del_Cruz_Azul_AC.svg/1024px-Escudo_del_Cruz_Azul_AC.svg.png'}}/>
+              <Image style={styles.img} source={{uri: 'https://clipart.info/images/ccovers/1518802542PSG-Png-Paris-Saint-Germain-Logo.png'}}/>
             </TouchableHighlight>
           </View>
 
