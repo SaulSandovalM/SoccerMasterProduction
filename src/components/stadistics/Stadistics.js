@@ -4,7 +4,7 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, Dimensions, TouchableHighlight} from 'react-native';
 import {Container, Content, Button, StyleProvider, Left, Right, Body} from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import getTheme from '../../../native-base-theme/components';
@@ -15,127 +15,201 @@ import SideMenu from 'react-native-side-menu';
 import Menu from '../comun/Menu';
 import Soccer from '../../assets/imgs/Soccer.png';
 
+const {width, height} = Dimensions.get('window')
+
+
 export default class Stadistics extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      isOpen: false
+    constructor(props) {
+        super(props)
+        this.state = {
+            isOpen: false
+        }
     }
-  }
 
-  toggle(){
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
-  }
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+    }
 
-  updateMenu(isOpen){
-    this.setState({isOpen})
-  }
+    updateMenu(isOpen) {
+        this.setState({isOpen})
+    }
 
-  static navigationOptions = {
-      header: null
-  };
+    static navigationOptions = {
+        header: null
+    };
 
-  render() {
-    return (
-      <StyleProvider style={getTheme(material)}>
-        <Container style={styles.container}>
+    render() {
+        return (
+            <StyleProvider style={getTheme(material)}>
+                <Container style={styles.container}>
 
-          <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
+                    <SideMenu menu={
+                        <View style={styles.menu}>
 
-          <Header toggle={this.toggle.bind(this)}/>
+                            <View>
+                                <Text style={styles.section}>ESTADÍSTICAS</Text>
+                            </View>
 
-          <Content style={styles.container}>
+                            <View>
+                                <TouchableHighlight>
+                                    <Button style={styles.Button2}
+                                            onPress={() => this.props.navigation.push('Jornadas')}>
+                                        <Icon name="soccer-ball-o" style={styles.icon}/>
+                                        <Text style={styles.text}>JORNADA</Text>
+                                        <Icon name="chevron-right" style={styles.icon}/>
+                                    </Button>
+                                </TouchableHighlight>
+                            </View>
 
-              <View style={styles.margin}>
+                            <View>
+                                <Text style={styles.section}>ESTADISTICAS</Text>
+                            </View>
 
-                <View style={styles.view}>
-                  <Text style={styles.num}>1</Text>
-                  <Text style={styles.liner}> - </Text>
-                  <Image style={styles.img}
-                   source={Soccer}/>
-                  <Text style={styles.copa}>COPA 1</Text>
-                  <Text style={styles.stadistics}>PJ</Text>
-                  <Text style={styles.stadistics}>PP</Text>
-                  <Text style={styles .stadistics}>PTS</Text>
-                </View>
+                            <View>
+                                <TouchableHighlight>
+                                    <Button style={styles.Button1}>
+                                        <Icon name="th-list" style={styles.icon2}/>
+                                        <Text style={styles.text2}>TABLA DE POSICIONES</Text>
+                                        <Icon name="chevron-right" style={styles.icon2}/>
+                                    </Button>
+                                </TouchableHighlight>
+                            </View>
 
-                <View style={styles.view0}>
-                  <Text style={styles.num}>1</Text>
-                  <Text style={styles.liner}> - </Text>
-                  <Image style={styles.img}
-                   source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
-                  <Text style={styles.team}>PACHUCA</Text>
-                  <Text style={styles.stadistic}>10</Text>
-                  <Text style={styles.stadistic}>20</Text>
-                  <Text style={styles .stadistic}>30</Text>
-                </View>
+                            <View>
+                                <TouchableHighlight>
+                                    <Button style={styles.Button1}>
+                                        <Icon name="bar-chart" style={styles.icon2}/>
+                                        <Text style={styles.text2}>TABLA DE GOLEO</Text>
+                                        <Icon name="chevron-right" style={styles.icon2}/>
+                                    </Button>
+                                </TouchableHighlight>
+                            </View>
 
-                <View style={styles.view2}>
-                  <Text style={styles.num}>1</Text>
-                  <Text style={styles.liner}> - </Text>
-                  <Image style={styles.img}
-                   source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
-                  <Text style={styles.team}>PACHUCA</Text>
-                  <Text style={styles.stadistic}>10</Text>
-                  <Text style={styles.stadistic}>20</Text>
-                  <Text style={styles.stadistic}>30</Text>
-                </View>
+                            <View>
+                                <Text style={styles.section}>ENFRENTAMIENTOS</Text>
+                            </View>
 
-                <View style={styles.view3}>
-                  <Text style={styles.num}>1</Text>
-                  <Text style={styles.liner}> - </Text>
-                  <Image style={styles.img}
-                   source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
-                  <Text style={styles.team}>PACHUCA</Text>
-                  <Text style={styles.stadistic}>10</Text>
-                  <Text style={styles.stadistic}>20</Text>
-                  <Text style={styles.stadistic}>30</Text>
-                </View>
+                            <View>
+                                <TouchableHighlight>
+                                    <Button style={styles.Button1}
+                                            onPress={() => this.props.navigation.push('Partidos')}>
+                                        <Icon name="th-list" style={styles.icon2}/>
+                                        <Text style={styles.text2}>PARTIDOS</Text>
+                                        <Icon name="chevron-right" style={styles.icon2}/>
+                                    </Button>
+                                </TouchableHighlight>
+                            </View>
+                            <View>
+                                <Text style={styles.section}>MERCADO</Text>
+                            </View>
 
-                <View style={styles.view4}>
-                  <Text style={styles.num}>1</Text>
-                  <Text style={styles.liner}> - </Text>
-                  <Image style={styles.img}
-                   source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
-                  <Text style={styles.team}>PACHUCA</Text>
-                  <Text style={styles.stadistic}>10</Text>
-                  <Text style={styles.stadistic}>20</Text>
-                  <Text style={styles.stadistic}>30</Text>
-                </View>
+                            <View>
+                                <TouchableHighlight>
+                                    <Button style={styles.Button3} onPress={() => this.props.navigation.push('Market')}>
+                                        <Icon name="dollar" style={styles.icon}/>
+                                        <Text style={styles.text}>MERCADO DE EQUIPOS</Text>
+                                        <Icon name="chevron-right" style={styles.icon}/>
+                                    </Button>
+                                </TouchableHighlight>
+                            </View>
 
-                <View style={styles.view5}>
-                  <Text style={styles.num}>1</Text>
-                  <Text style={styles.liner}> - </Text>
-                  <Image style={styles.img}
-                   source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
-                  <Text style={styles.team}>PACHUCA</Text>
-                  <Text style={styles.stadistic}>10</Text>
-                  <Text style={styles.stadistic}>20</Text>
-                  <Text style={styles.stadistic}>30</Text>
-                </View>
+                        </View>
+                    } isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
 
-                <View style={styles.view6}>
-                  <Text style={styles.num}>1</Text>
-                  <Text style={styles.liner}> - </Text>
-                  <Image style={styles.img}
-                   source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
-                  <Text style={styles.team}>PACHUCA</Text>
-                  <Text style={styles.stadistic}>10</Text>
-                  <Text style={styles.stadistic}>20</Text>
-                  <Text style={styles.stadistic}>30</Text>
-                </View>
+                        <Header toggle={this.toggle.bind(this)}/>
 
-              </View>
-            </Content>
+                        <Content style={styles.container}>
 
-            </SideMenu>
+                            <View style={styles.margin}>
 
-          </Container>
-        </StyleProvider>
-      );
-  }
+                                <View style={styles.view}>
+                                    <Text style={styles.num}>1</Text>
+                                    <Text style={styles.liner}> - </Text>
+                                    <Image style={styles.img}
+                                           source={Soccer}/>
+                                    <Text style={styles.copa}>COPA 1</Text>
+                                    <Text style={styles.stadistics}>PJ</Text>
+                                    <Text style={styles.stadistics}>PP</Text>
+                                    <Text style={styles.stadistics}>PTS</Text>
+                                </View>
+
+                                <View style={styles.view0}>
+                                    <Text style={styles.num}>1</Text>
+                                    <Text style={styles.liner}> - </Text>
+                                    <Image style={styles.img}
+                                           source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                    <Text style={styles.team}>PACHUCA</Text>
+                                    <Text style={styles.stadistic}>10</Text>
+                                    <Text style={styles.stadistic}>20</Text>
+                                    <Text style={styles.stadistic}>30</Text>
+                                </View>
+
+                                <View style={styles.view2}>
+                                    <Text style={styles.num}>1</Text>
+                                    <Text style={styles.liner}> - </Text>
+                                    <Image style={styles.img}
+                                           source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                    <Text style={styles.team}>PACHUCA</Text>
+                                    <Text style={styles.stadistic}>10</Text>
+                                    <Text style={styles.stadistic}>20</Text>
+                                    <Text style={styles.stadistic}>30</Text>
+                                </View>
+
+                                <View style={styles.view3}>
+                                    <Text style={styles.num}>1</Text>
+                                    <Text style={styles.liner}> - </Text>
+                                    <Image style={styles.img}
+                                           source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                    <Text style={styles.team}>PACHUCA</Text>
+                                    <Text style={styles.stadistic}>10</Text>
+                                    <Text style={styles.stadistic}>20</Text>
+                                    <Text style={styles.stadistic}>30</Text>
+                                </View>
+
+                                <View style={styles.view4}>
+                                    <Text style={styles.num}>1</Text>
+                                    <Text style={styles.liner}> - </Text>
+                                    <Image style={styles.img}
+                                           source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                    <Text style={styles.team}>PACHUCA</Text>
+                                    <Text style={styles.stadistic}>10</Text>
+                                    <Text style={styles.stadistic}>20</Text>
+                                    <Text style={styles.stadistic}>30</Text>
+                                </View>
+
+                                <View style={styles.view5}>
+                                    <Text style={styles.num}>1</Text>
+                                    <Text style={styles.liner}> - </Text>
+                                    <Image style={styles.img}
+                                           source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                    <Text style={styles.team}>PACHUCA</Text>
+                                    <Text style={styles.stadistic}>10</Text>
+                                    <Text style={styles.stadistic}>20</Text>
+                                    <Text style={styles.stadistic}>30</Text>
+                                </View>
+
+                                <View style={styles.view6}>
+                                    <Text style={styles.num}>1</Text>
+                                    <Text style={styles.liner}> - </Text>
+                                    <Image style={styles.img}
+                                           source={{uri: 'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/11/11.png'}}/>
+                                    <Text style={styles.team}>PACHUCA</Text>
+                                    <Text style={styles.stadistic}>10</Text>
+                                    <Text style={styles.stadistic}>20</Text>
+                                    <Text style={styles.stadistic}>30</Text>
+                                </View>
+
+                            </View>
+                        </Content>
+
+                    </SideMenu>
+
+                </Container>
+            </StyleProvider>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -143,7 +217,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black'
     },
     margin: {
-      marginTop: 30
+        marginTop: 30
     },
     view0: {
         alignItems: 'center',
@@ -267,15 +341,57 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 15
     },
     stadistics: {
-      color: 'black',
-      fontSize: 20,
-      marginTop: -10,
-      marginRight: 10
+        color: 'black',
+        fontSize: 20,
+        marginTop: -10,
+        marginRight: 10
     },
     copa: {
-      color: 'black',
-      fontSize: 20,
-      marginTop: -10,
-      width: 150
+        color: 'black',
+        fontSize: 20,
+        marginTop: -10,
+        width: 150
+    },
+    menu: {
+        flex: 1,
+        width: width,
+        height: height,
+        backgroundColor: "#000"
+    },
+    section: {
+        color: 'white',
+        fontSize: 20,
+        marginTop: 15,
+        marginLeft: 15
+    },
+    Button1: {
+        borderRadius: 35,
+        width: 240,
+        marginTop: 20,
+        backgroundColor: 'white'
+    },
+    icon2: {
+        fontSize: 15,
+        color: 'black'
+    },
+    text: {
+        color: 'white',
+        alignSelf: 'center'
+    },
+    text2: {
+        color: 'black',
+        alignSelf: 'center'
+    },
+    Button2: {
+        borderRadius: 35,
+        width: 240,
+        marginTop: 20,
+        backgroundColor: 'green'
+    },
+    Button3: {
+        borderRadius: 35,
+        width: 240,
+        marginTop: 20,
+        backgroundColor: 'red'
     }
 });

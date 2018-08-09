@@ -27,7 +27,7 @@ import Stadistics from './src/components/stadistics/Stadistics';
 const Routes = createStackNavigator({
   Copas: Copas,
   TeamAfricana: TeamAfricana,
-  TeamAmericana: TeamAmericana,
+  TeamAmerica: TeamAmericana,
   TeamArgentina: TeamArgentina,
   TeamConfederaciones: TeamConfederaciones,
   TeamFemenil: TeamFemenil,
