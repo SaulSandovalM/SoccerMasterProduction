@@ -1,8 +1,3 @@
-/**
- * SoccerMaster
- * @HackSite
- */
-
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, TouchableHighlight} from 'react-native';
 

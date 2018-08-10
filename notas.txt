@@ -1,8 +1,0 @@
-                            rojo suiza -  e31114
-                            verde lituania 008641
-                            azul japon - 131e7d
-                            gris alemania - 272727
-                            amarillo australia - ffcb0a
-                            azul francia - 006ad6
-
-                            <TouchableHighlight onPress={() => this.props.navigation.push('MarketPersonal')}>

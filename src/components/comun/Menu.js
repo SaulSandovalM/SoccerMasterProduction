@@ -1,122 +1,132 @@
 import React from 'react';
-import {Dimensions, StyleSheet, View, Text, TouchableHighlight} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {Button} from 'native-base';
+import {View, Text, StyleSheet, Image, Alert, TouchableHighlight} from 'react-native';
+import {Container, Input, Label, Button} from 'native-base';
 import {NavigationActions} from 'react-navigation';
-
-const {width, height} = Dimensions.get('window');
+import fondo from '../../assets/imgs/pasto.jpg';
+import firebase from '../firebase/firebase';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Menu extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
+    static navigationOptions = {
+        header: null
+    };
+    constructor(props) {
+      super(props);
+      this.state = {
+        email: "",
+        password: "",
+      };
+    }
+    onLoginPress = () => {
+      firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+        .then(() => {
+            this.props.navigation.push('Home')
+        }, (error) => {
+            Alert.alert('Ingresa un usuario y contraseña validos');
+        });
+    };
 
-  render(){
-    return (
-        <View style={styles.menu}>
-
-          <View>
-            <Text style={styles.section}>PARTIDOS</Text>
-          </View>
-
-          <View>
-            <TouchableHighlight>
-              <Button style={styles.Button2} onPress={() => this.props.navigation.push('Jornadas')}>
-                <Icon name="soccer-ball-o" style={styles.icon}/>
-                <Text style={styles.text}>JORNADA</Text>
-                <Icon name="chevron-right" style={styles.icon}/>
-              </Button>
+    render() {
+      return (
+        <Container style={styles.container}>
+          <View style={styles.welcomeWrapper}>
+            <Icon name="soccer-ball-o" style={styles.icon}/>
+            <Text style={styles.welcomeText}>Bienvenido a {'\n'}Soccer Master</Text>
+            <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.navigation.push('PartidosRey')}>
+              <Text style={styles.buttonText}>Continua como Jugador</Text>
             </TouchableHighlight>
-          </View>
-
-          <View>
-            <Text style={styles.section}>ESTADISTICAS</Text>
-          </View>
-
-          <View>
-            <TouchableHighlight>
-              <Button style={styles.Button1} onPress={() => this.props.navigation.push('Stadistics')}>
-                <Icon name="th-list" style={styles.icon2}/>
-                <Text style={styles.text2}>POSICIONES</Text>
-                <Icon name="chevron-right" style={styles.icon2}/>
-              </Button>
+            <TouchableHighlight style={styles.buttonContainerFan}>
+              <Text style={styles.buttonTextFan}>Continua como Fan</Text>
             </TouchableHighlight>
+            <View style={styles.options}>
+              <Text style={styles.optionsText}>Nota</Text>
+            </View>
+            <View style={styles.termsContainer}>
+              <Text style={styles.termsText}>Al hacer click en los botones acepta nuestros</Text>
+              <TouchableHighlight style={styles.link}>
+                <Text style={styles.termsText}> Terminos de Servicio </Text>
+              </TouchableHighlight>
+              <Text style={styles.termsText}>y</Text>
+              <TouchableHighlight style={styles.link}>
+                <Text style={styles.termsText}> Politicas de Privacidad</Text>
+              </TouchableHighlight>
+            </View>
           </View>
-
-          <View>
-            <TouchableHighlight>
-              <Button style={styles.Button1}>
-                <Icon name="bar-chart" style={styles.icon2}/>
-                <Text style={styles.text2}>TABLA DE GOLEO</Text>
-                <Icon name="chevron-right" style={styles.icon2}/>
-              </Button>
-            </TouchableHighlight>
-          </View>
-
-          <View>
-            <Text style={styles.section}>MERCADO</Text>
-          </View>
-
-          <View>
-            <TouchableHighlight>
-              <Button style={styles.Button3} onPress={() => navigation('Market')}>
-                <Icon name="dollar" style={styles.icon}/>
-                <Text style={styles.text}>MERCADO DE EQUIPOS</Text>
-                <Icon name="chevron-right" style={styles.icon}/>
-              </Button>
-            </TouchableHighlight>
-          </View>
-
-        </View>
-    )
-  }
+        </Container>
+      );
+    }
 }
 
 const styles = StyleSheet.create({
-  menu: {
+  container: {
     flex: 1,
-    width: width,
-    height: height,
-    backgroundColor:"#000"
+    display: 'flex',
+    backgroundColor: 'black'
   },
-  section: {
+  welcomeWrapper: {
+    flex: 1,
+    display: 'flex',
+    marginTop: 30,
+    padding: 20
+  },
+  welcomeText: {
+    fontSize: 30,
     color: 'white',
-    fontSize: 20,
-    marginTop: 15,
-    marginLeft: 15
+    fontWeight: '300',
+    marginBottom: 40
   },
-  Button1: {
-    borderRadius: 35,
-    width: 240,
-    marginTop: 20,
+  buttonContainer: {
+    padding: 15,
+    borderRadius: 40,
+    borderWidth: 1,
+    borderColor: 'white',
     backgroundColor: 'white'
   },
   icon: {
-    fontSize: 15,
-    color: 'white'
+    fontSize: 50,
+    color: 'white',
+    marginTop: 40,
+    marginBottom: 40
   },
-  icon2: {
-    fontSize: 15,
+  buttonText: {
+    fontSize: 16,
+    width: '100%',
+    textAlign: 'center',
     color: 'black'
   },
-  text: {
+  buttonContainerFan: {
+    padding: 15,
+    borderRadius: 40,
+    borderWidth: 1,
+    borderColor: 'white',
+    marginTop: 15,
+  },
+  buttonTextFan: {
+    fontSize: 16,
+    width: '100%',
+    textAlign: 'center',
+    color: 'white'
+  },
+  options: {
+    marginTop: 15,
+  },
+  optionsText: {
     color: 'white',
-    alignSelf: 'center'
+    fontSize: 16
   },
-  text2: {
-    color: 'black',
-    alignSelf: 'center'
+  termsText: {
+    color: 'white',
+    fontSize: 13,
+    fontWeight: '600'
   },
-  Button2: {
-    borderRadius: 35,
-    width: 240,
-    marginTop: 20,
-    backgroundColor: 'green'
+  termsContainer: {
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    marginTop: 30,
   },
-  Button3: {
-    borderRadius: 35,
-    width: 240,
-    marginTop: 20,
-    backgroundColor: 'red'
+  link: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'white',
   }
-})
+});

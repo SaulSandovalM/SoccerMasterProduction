@@ -1,5 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation';
+import Login from './src/components/login/Login';
+import LoginPlayer from './src/components/login/LoginPlayer';
 import Copas from './src/components/glasses/Copas';
 import TeamAfricana from './src/components/teams/TeamAfricana';
 import TeamAmerica from './src/components/teams/TeamAmerica';
@@ -49,8 +51,12 @@ import MarketPersonalOro from './src/components/market/MarketPersonalOro';
 import MarketPersonalRey from './src/components/market/MarketPersonalRey';
 import MarketPersonalSudamericana from './src/components/market/MarketPersonalSudamericana';
 import Thrashed from './src/components/thrashed/Thrashed';
+import Menu from './src/components/comun/Menu';
 
 const Routes = createStackNavigator({
+  Login: Login,
+  LoginPlayer: LoginPlayer,
+  Menu: Menu,
   Copas: Copas,
   TeamAfricana: TeamAfricana,
   TeamAmerica: TeamAmerica,
@@ -100,7 +106,7 @@ const Routes = createStackNavigator({
   Thrashed: Thrashed,
   Partido: Partido,
 }, {
-  initialRoute: 'Copas',
+  initialRoute: 'Login',
 });
 
 export default class App extends React.Component {

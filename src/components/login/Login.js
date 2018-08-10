@@ -1,110 +1,115 @@
 import React from 'react';
-import {View, Text, StyleSheet, ImageBackground, Image, Alert} from 'react-native';
-import {Form, Item, Input, Label, Button} from 'native-base';
+import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
+import {Container, Input, Label, Button} from 'native-base';
 import {NavigationActions} from 'react-navigation';
-import fondo from '../../assets/imgs/pasto.jpg';
-import icon from '../../assets/imgs/icon.png';
-import firebase from '../firebase/firebase';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Login extends React.Component {
     static navigationOptions = {
         header: null
     };
-    constructor(props) {
-      super(props);
-      this.state = {
-        email: "",
-        password: "",
-      };
-    }
-    onLoginPress = () => {
-      firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
-        .then(() => {
-            this.props.navigation.push('Home')
-        }, (error) => {
-            Alert.alert('Ingresa un usuario y contraseña validos');
-        });
-    };
 
     render() {
       return (
-        <ImageBackground source={fondo} style={styles.viewPager}>
-
-          <View style={styles.container}>
-            <View style={styles.containerStyle}>
-              <Image source={icon} style={styles.imageStyle}/>
-
-              <Form>
-                <Item floatingLabel>
-                  <Label style={styles.color}>Correo electrónico</Label>
-                  <Input style={styles.color} onChangeText={(text) => {this.setState({email: text})}}
-                    keyboardType="email-address"
-                    autoCapitalize="none"/>
-                </Item>
-                <Item floatingLabel last>
-                  <Label style={styles.color}>Contraseña</Label>
-                  <Input style={styles.color} onChangeText={(text) => {this.setState({password: text})}}
-                    secureTextEntry={true}
-                    autoCapitalize="none"
-                    autoCorrect={false}/>
-                </Item>
-              </Form>
-
-              <View>
-                <Button rounded style={styles.buttonStyle} onPress={this.onLoginPress}>
-                  <Text style={styles.color}>Iniciar Sesión</Text>
-                </Button>
-                <Button rounded bordered warning style={styles.buttonStyle2}>
-                  <Text style={styles.color} onPress={() => this.props.navigation.push('Registro')}>Regístrate</Text>
-                </Button>
-              </View>
-
+        <Container style={styles.container}>
+          <View style={styles.welcomeWrapper}>
+            <Icon name="soccer-ball-o" style={styles.icon}/>
+            <Text style={styles.welcomeText}>Bienvenido a {'\n'}Soccer Master</Text>
+            <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.navigation.push('LoginPlayer')}>
+              <Text style={styles.buttonText}>Continua como Jugador</Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.buttonContainerFan}>
+              <Text style={styles.buttonTextFan}>Continua como Fan</Text>
+            </TouchableHighlight>
+            <View style={styles.options}>
+              <Text style={styles.optionsText}>Nota</Text>
+            </View>
+            <View style={styles.termsContainer}>
+              <Text style={styles.termsText}>Al hacer click en los botones acepta nuestros</Text>
+              <TouchableHighlight style={styles.link}>
+                <Text style={styles.termsText}> Terminos de Servicio </Text>
+              </TouchableHighlight>
+              <Text style={styles.termsText}>y</Text>
+              <TouchableHighlight style={styles.link}>
+                <Text style={styles.termsText}> Politicas de Privacidad</Text>
+              </TouchableHighlight>
             </View>
           </View>
-        </ImageBackground>
+        </Container>
       );
     }
 }
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1
-  },
-  viewPager: {
     flex: 1,
+    display: 'flex',
+    backgroundColor: 'black'
   },
-  buttonStyle: {
-    alignSelf: 'center',
-    marginTop: 20,
-    backgroundColor: 'orange',
-    width: 200,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 6,
+  welcomeWrapper: {
+    flex: 1,
+    display: 'flex',
+    marginTop: 30,
+    padding: 20
   },
-  buttonStyle2: {
-    alignSelf: 'center',
-    marginTop: 20,
-    width: 200,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 6,
+  welcomeText: {
+    fontSize: 30,
+    color: 'white',
+    fontWeight: '300',
+    marginBottom: 40
   },
-  containerStyle: {
-    height: 'auto',
-    width: '80%',
-    backgroundColor: 'rgba(31, 32, 29, 0.6)',
-    borderRadius: 35,
+  buttonContainer: {
+    padding: 15,
+    borderRadius: 40,
+    borderWidth: 1,
+    borderColor: 'white',
+    backgroundColor: 'white'
   },
-  imageStyle: {
-    width: '27%',
-    height: '27%',
-    alignSelf: 'center',
-    marginTop: 16,
+  icon: {
+    fontSize: 50,
+    color: 'white',
+    marginTop: 40,
+    marginBottom: 40
   },
-  color: {
+  buttonText: {
+    fontSize: 16,
+    width: '100%',
+    textAlign: 'center',
+    color: 'black'
+  },
+  buttonContainerFan: {
+    padding: 15,
+    borderRadius: 40,
+    borderWidth: 1,
+    borderColor: 'white',
+    marginTop: 15,
+  },
+  buttonTextFan: {
+    fontSize: 16,
+    width: '100%',
+    textAlign: 'center',
     color: 'white'
+  },
+  options: {
+    marginTop: 15,
+  },
+  optionsText: {
+    color: 'white',
+    fontSize: 16
+  },
+  termsText: {
+    color: 'white',
+    fontSize: 13,
+    fontWeight: '600'
+  },
+  termsContainer: {
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    marginTop: 30,
+  },
+  link: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'white',
   }
 });
