@@ -5,13 +5,13 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 const Header = props => {
     return (
         <View style={styles.container}>
-            <TouchableWithoutFeedback onPress={() => props.toggle()}>
-                <Icon name="bars" color="white" size={25} />
-            </TouchableWithoutFeedback>
-            <Image style={styles.logo} source={require('../../assets/imgs/Soccer.png')}/>
-            <TouchableWithoutFeedback>
+          <TouchableWithoutFeedback onPress={() => props.toggle()}>
+              <Icon name="bars" color="white" size={25} />
+          </TouchableWithoutFeedback>
+          <Image style={styles.logo} source={require('../../assets/imgs/Soccer.png')}/>
+          <TouchableWithoutFeedback>
             <Icon name="search" color="black" size={25} />
-            </TouchableWithoutFeedback>
+          </TouchableWithoutFeedback>
         </View>
     )
 }

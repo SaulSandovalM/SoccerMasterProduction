@@ -18,7 +18,7 @@ export default class Login extends React.Component {
             <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.navigation.push('LoginPlayer')}>
               <Text style={styles.buttonText}>Continua como Jugador</Text>
             </TouchableHighlight>
-            <TouchableHighlight style={styles.buttonContainerFan}>
+            <TouchableHighlight style={styles.buttonContainerFan} onPress={() => this.props.navigation.push('Copas')}>
               <Text style={styles.buttonTextFan}>Continua como Fan</Text>
             </TouchableHighlight>
             <View style={styles.options}>
@@ -47,8 +47,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'black'
   },
   welcomeWrapper: {
-    flex: 1,
-    display: 'flex',
     marginTop: 30,
     padding: 20
   },

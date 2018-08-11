@@ -52,13 +52,22 @@ import MarketPersonalRey from './src/components/market/MarketPersonalRey';
 import MarketPersonalSudamericana from './src/components/market/MarketPersonalSudamericana';
 import Thrashed from './src/components/thrashed/Thrashed';
 import Menu from './src/components/comun/Menu';
+import Index from './src/components/login/Index';
 
 const Routes = createStackNavigator({
   Login: Login,
-  LoginPlayer: LoginPlayer,
+  Index: Index,
   Menu: Menu,
+  LoginPlayer: LoginPlayer,
   Copas: Copas,
   TeamAfricana: TeamAfricana,
+  PartidosRey: PartidosRey,
+  StadisticsAfricana: StadisticsAfricana,
+  MarketAfricana: MarketAfricana,
+  MarketPersonalAfricana: MarketPersonalAfricana,
+  Thrashed: Thrashed,
+  Partido: Partido,
+
   TeamAmerica: TeamAmerica,
   TeamArgentina: TeamArgentina,
   TeamConfederaciones: TeamConfederaciones,
@@ -67,7 +76,6 @@ const Routes = createStackNavigator({
   TeamOro: TeamOro,
   TeamRey: TeamRey,
   TeamSudamericana: TeamSudamericana,
-  PartidosRey: PartidosRey,
   PartidosAmerica: PartidosAmerica,
   PartidosOro: PartidosOro,
   PartidosLibertadores: PartidosLibertadores,
@@ -76,7 +84,6 @@ const Routes = createStackNavigator({
   PartidosConfederaciones: PartidosConfederaciones,
   PartidosSudamericana: PartidosSudamericana,
   PartidosFemenil: PartidosFemenil,
-  StadisticsAfricana: StadisticsAfricana,
   StadisticsAmerica: StadisticsAmerica,
   StadisticsArgentina: StadisticsArgentina,
   StadisticsConfederaciones: StadisticsConfederaciones,
@@ -85,7 +92,6 @@ const Routes = createStackNavigator({
   StadisticsOro: StadisticsOro,
   StadisticsRey: StadisticsRey,
   StadisticsSudamericana: StadisticsSudamericana,
-  MarketAfricana: MarketAfricana,
   MarketAmerica: MarketAmerica,
   MarketArgentina: MarketArgentina,
   MarketConfederaciones: MarketConfederaciones,
@@ -94,7 +100,6 @@ const Routes = createStackNavigator({
   MarketOro: MarketOro,
   MarketRey: MarketRey,
   MarketSudamericana: MarketSudamericana,
-  MarketPersonalAfricana: MarketPersonalAfricana,
   MarketPersonalAmerica: MarketPersonalAmerica,
   MarketPersonalArgentina: MarketPersonalArgentina,
   MarketPersonalConfederaciones: MarketPersonalConfederaciones,
@@ -103,8 +108,6 @@ const Routes = createStackNavigator({
   MarketPersonalOro: MarketPersonalOro,
   MarketPersonalRey: MarketPersonalRey,
   MarketPersonalSudamericana: MarketPersonalSudamericana,
-  Thrashed: Thrashed,
-  Partido: Partido,
 }, {
   initialRoute: 'Login',
 });
