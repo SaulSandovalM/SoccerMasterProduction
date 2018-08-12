@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {firebaseAuth} from '../firebase/firebase';
 import {Container} from 'native-base';
 import Login from './Login';
-import PartidosRey from '../matches/PartidosRey';
+import PartidosRey from '../matches/PartidosRey/PartidosRey';
 
 export default class Inicio extends Component {
   state = {
