@@ -10,7 +10,7 @@ import TeamConfederaciones from './src/components/teams/TeamConfederaciones';
 import TeamFemenil from './src/components/teams/TeamFemenil';
 import TeamLibertadores from './src/components/teams/TeamLibertadores';
 import TeamOro from './src/components/teams/TeamOro';
-import TeamRey from './src/components/teams/TeamRey';
+import TeamRey from './src/components/teams/CopaRey/TeamRey';
 import TeamSudamericana from './src/components/teams/TeamSudamericana';
 import PartidosRey from './src/components/matches/PartidosRey';
 import PartidosAfricana from './src/components/matches/PartidosAfricana';
@@ -56,10 +56,10 @@ import Index from './src/components/login/Index';
 
 const Routes = createStackNavigator({
   Login: Login,
-  Index: Index,
-  Menu: Menu,
   LoginPlayer: LoginPlayer,
   Copas: Copas,
+  Index: Index,
+  Menu: Menu,
   TeamAfricana: TeamAfricana,
   PartidosRey: PartidosRey,
   StadisticsAfricana: StadisticsAfricana,

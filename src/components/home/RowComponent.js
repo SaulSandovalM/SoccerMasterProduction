@@ -5,59 +5,50 @@ import {TouchableWithoutFeedback, Animated, Alert, View, Image, StyleSheet} from
 const ACTION_TIMER = 400;
 
 class RowComponent extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            done: false,
-            pressAction: new Animated.Value(0),
-            item: null
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      done: false,
+      pressAction: new Animated.Value(0),
+      item: null
+    };
+  }
 
-    componentWillMount() {
-        this._value = 0;
-        this.state.pressAction.addListener((v) => this._value = v.value);
-    }
+  componentWillMount() {
+    this._value = 0;
+    this.state.pressAction.addListener((v) => this._value = v.value);
+  }
 
+  changeDone = (item) => {
+    console.log(item);
+  }
 
-    changeDone = (item) => {
-//        this.setState({done:!this.state.done});
-        console.log(item);
+  pressIn = () => {
+    Animated.timing(this.state.pressAction, {
+        duration: ACTION_TIMER,
+        toValue: 1
+    }).start(this.animationActionComplete);
+  }
 
-    }
-    pressIn = () => {
-        Animated.timing(this.state.pressAction, {
-            duration: ACTION_TIMER,
-            toValue: 1
-        }).start(this.animationActionComplete);
-    }
-
-
-    render() {
-        return (
-            <View style={styles.view2}>
-                <View style={styles.margin}>
-                    <View style={styles.center}>
-                        <View style={styles.view}>
-                            <Text style={styles.color}>{this.props.item.name}</Text>
-                        </View>
-
-                        <Image style={styles.img}
-                               source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-                        <Text style={styles.color}> {this.props.item.horario} </Text>
-                        <Image style={styles.img}
-                               source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
-
-                        <View style={styles.view}>
-                            <Text style={styles.color}>{this.props.item.nametwo}</Text>
-                        </View>
-                    </View>
-                </View>
+  render() {
+    return (
+      <View style={styles.view2}>
+        <View style={styles.margin}>
+          <View style={styles.center}>
+            <View style={styles.view}>
+              <Text style={styles.color}>{this.props.item.name}</Text>
             </View>
-
-        );
-    }
-
+            <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
+            <Text style={styles.color}> {this.props.item.horario} </Text>
+            <Image style={styles.img} source={{uri: 'http://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/4245.png'}}/>
+            <View style={styles.view}>
+              <Text style={styles.color}>{this.props.item.nametwo}</Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
