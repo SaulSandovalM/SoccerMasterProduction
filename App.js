@@ -23,15 +23,15 @@ import PartidosOro from './src/components/matches/PartidosOro/PartidosOro';
 import PartidosSudamericana from './src/components/matches/PartidosSudamericana/PartidosSudamericana';
 import Partido from './src/components/matches/Partido';
 import MarketTeam from './src/components/market/MarketTeam';
-import StadisticsAfricana from './src/components/stadistics/StadisticsAfricana';
-import StadisticsAmerica from './src/components/stadistics/StadisticsAmerica';
-import StadisticsArgentina from './src/components/stadistics/StadisticsArgentina';
-import StadisticsConfederaciones from './src/components/stadistics/StadisticsConfederaciones';
-import StadisticsFemenil from './src/components/stadistics/StadisticsFemenil';
-import StadisticsLibertadores from './src/components/stadistics/StadisticsLibertadores';
-import StadisticsOro from './src/components/stadistics/StadisticsOro';
-import StadisticsRey from './src/components/stadistics/StadisticsRey';
-import StadisticsSudamericana from './src/components/stadistics/StadisticsSudamericana';
+import StadisticsAfricana from './src/components/stadistics/StadisticsAfricana/StadisticsAfricana';
+import StadisticsAmerica from './src/components/stadistics/StadisticsAmerica/StadisticsAmerica';
+import StadisticsArgentina from './src/components/stadistics/StadisticsArgentina/StadisticsArgentina';
+import StadisticsConfederaciones from './src/components/stadistics/StadisticsConfederaciones/StadisticsConfederaciones';
+import StadisticsFemenil from './src/components/stadistics/StadisticsFemenil/StadisticsFemenil';
+import StadisticsLibertadores from './src/components/stadistics/StadisticsLibertadores/StadisticsLibertadores';
+import StadisticsOro from './src/components/stadistics/StadisticsOro/StadisticsOro';
+import StadisticsRey from './src/components/stadistics/StadisticsRey/StadisticsRey';
+import StadisticsSudamericana from './src/components/stadistics/StadisticsSudamericana/StadisticsSudamericana';
 import MarketAfricana from './src/components/market/MarketAfricana';
 import MarketAmerica from './src/components/market/MarketAmerica';
 import MarketArgentina from './src/components/market/MarketArgentina';
@@ -55,6 +55,7 @@ import Menu from './src/components/comun/Menu';
 import Index from './src/components/login/Index';
 
 const Routes = createStackNavigator({
+  Thrashed: Thrashed,
   Login: Login,
   LoginPlayer: LoginPlayer,
   Copas: Copas,
@@ -65,7 +66,6 @@ const Routes = createStackNavigator({
   StadisticsAfricana: StadisticsAfricana,
   MarketAfricana: MarketAfricana,
   MarketPersonalAfricana: MarketPersonalAfricana,
-  Thrashed: Thrashed,
   Partido: Partido,
 
   TeamAmerica: TeamAmerica,
@@ -109,7 +109,7 @@ const Routes = createStackNavigator({
   MarketPersonalRey: MarketPersonalRey,
   MarketPersonalSudamericana: MarketPersonalSudamericana,
 }, {
-  initialRoute: 'Login',
+  initialRoute: 'Thrashed',
 });
 
 export default class App extends React.Component {
