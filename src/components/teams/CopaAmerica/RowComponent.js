@@ -1,33 +1,10 @@
 import React, {Component} from 'react';
-import {TouchableHighlight, Animated, StyleSheet, Text} from 'react-native';
+import {TouchableHighlight, StyleSheet, Text} from 'react-native';
 
-const ACTION_TIMER = 400;
-
-class RowComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      done: false,
-      pressAction: new Animated.Value(0),
-      item: null
-    };
-  }
-
-  componentWillMount() {
-    this._value = 0;
-    this.state.pressAction.addListener((v) => this._value = v.value);
-  }
-
-  pressIn = () => {
-    Animated.timing(this.state.pressAction, {
-      duration: ACTION_TIMER,
-      toValue: 1
-    }).start(this.animationActionComplete);
-  }
-
+export default class RowComponent extends Component {
   render() {
     return (
-      <TouchableHighlight onPress={() => this.props.navigation.push('PartidosAmerica')} style={styles.touch}>
+      <TouchableHighlight style={styles.touch}>
         <Text style={styles.text}>{this.props.item.nombre}</Text>
       </TouchableHighlight>
     );
@@ -49,5 +26,3 @@ const styles = StyleSheet.create({
     color: 'white'
   },
 });
-
-export default RowComponent;

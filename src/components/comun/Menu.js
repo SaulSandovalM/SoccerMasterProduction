@@ -15,7 +15,7 @@ export default class Menu extends React.Component {
 
         <View style={styles.container}>
           <TouchableWithoutFeedback>
-              <Icon name="remove" color="white" size={25} />
+              <Icon name="remove" color="black" size={25} />
           </TouchableWithoutFeedback>
           <Text style={styles.title}>Menu</Text>
           <TouchableWithoutFeedback>

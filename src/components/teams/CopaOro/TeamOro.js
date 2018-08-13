@@ -52,6 +52,10 @@ export default class TeamOro extends Component {
             />
           </View>
 
+          <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.navigation.push('PartidosOro')}>
+            <Text style={styles.buttonText}>Continuar</Text>
+          </TouchableHighlight>
+
         </ScrollView>
       </View>
     );
@@ -97,5 +101,18 @@ const styles = StyleSheet.create({
     width: 120,
     height: 40,
     alignSelf: 'center'
+  },
+  buttonContainer: {
+    padding: 15,
+    borderRadius: 40,
+    borderWidth: 1,
+    borderColor: 'white',
+    backgroundColor: 'white'
+  },
+  buttonText: {
+    fontSize: 16,
+    width: '100%',
+    textAlign: 'center',
+    color: 'black'
   }
 });

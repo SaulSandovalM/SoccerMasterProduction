@@ -53,10 +53,12 @@ import MarketPersonalSudamericana from './src/components/market/MarketPersonalSu
 import Thrashed from './src/components/thrashed/Thrashed';
 import Menu from './src/components/comun/Menu';
 import Index from './src/components/login/Index';
+import PartidosJugador from './src/components/matches/PartidosJugador/PartidosJugador';
+import Profile from './src/components/profile/Profile';
 
 const Routes = createStackNavigator({
-  Thrashed: Thrashed,
   Login: Login,
+  Thrashed: Thrashed,
   LoginPlayer: LoginPlayer,
   Copas: Copas,
   Index: Index,
@@ -67,6 +69,8 @@ const Routes = createStackNavigator({
   MarketAfricana: MarketAfricana,
   MarketPersonalAfricana: MarketPersonalAfricana,
   Partido: Partido,
+  PartidosJugador: PartidosJugador,
+  Profile: Profile,
 
   TeamAmerica: TeamAmerica,
   TeamArgentina: TeamArgentina,
@@ -109,7 +113,7 @@ const Routes = createStackNavigator({
   MarketPersonalRey: MarketPersonalRey,
   MarketPersonalSudamericana: MarketPersonalSudamericana,
 }, {
-  initialRoute: 'Thrashed',
+  initialRoute: 'Login',
 });
 
 export default class App extends React.Component {

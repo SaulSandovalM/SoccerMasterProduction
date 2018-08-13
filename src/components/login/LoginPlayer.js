@@ -19,7 +19,7 @@ export default class LoginPlayer extends React.Component {
   onLoginPress = () => {
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
       .then(() => {
-          this.props.navigation.push('PartidosRey')
+          this.props.navigation.push('PartidosJugador')
       }, (error) => {
           Alert.alert('Ingresa un usuario y contraseña validos');
       });
