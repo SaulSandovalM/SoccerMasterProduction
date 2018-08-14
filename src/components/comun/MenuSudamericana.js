@@ -4,7 +4,7 @@ import {Container, Content, Button} from 'native-base';
 import {NavigationActions} from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default class Menu extends React.Component {
+export default class MenuSudamericana extends React.Component {
   static navigationOptions = {
     header: null
   };
@@ -14,7 +14,7 @@ export default class Menu extends React.Component {
       <View style={styles.menu}>
         <View style={styles.container}>
           <TouchableWithoutFeedback>
-            <Icon name="remove" color="white" size={25} />
+            <Icon name="remove" color="black" size={25} style={styles.remove}/>
           </TouchableWithoutFeedback>
           <Text style={styles.title}>Menu</Text>
           <TouchableWithoutFeedback>
@@ -29,7 +29,7 @@ export default class Menu extends React.Component {
 
           <View>
             <TouchableHighlight>
-              <Button style={styles.Button2} onPress={() => this.props.navigation.push('Jornadas')}>
+              <Button style={styles.Button2} onPress={() => this.props.navigation.push('PartidosSudamericana')}>
                 <Icon name="soccer-ball-o" style={styles.icon}/>
                 <Text style={styles.text}>JORNADA</Text>
                 <Icon name="chevron-right" style={styles.icon}/>
@@ -43,7 +43,7 @@ export default class Menu extends React.Component {
 
           <View>
             <TouchableHighlight>
-              <Button style={styles.Button1} onPress={() => this.props.navigation.push('Stadistics')}>
+              <Button style={styles.Button1} onPress={() => this.props.navigation.push('StadisticsSudamericana')}>
                 <Icon name="th-list" style={styles.icon2}/>
                 <Text style={styles.text2}>ESTADISTICAS</Text>
                 <Icon name="chevron-right" style={styles.icon2}/>
@@ -53,7 +53,7 @@ export default class Menu extends React.Component {
 
           <View>
             <TouchableHighlight>
-              <Button style={styles.Button1}>
+              <Button style={styles.Button1} onPress={() => this.props.navigation.push('Thrashed')}>
                 <Icon name="bar-chart" style={styles.icon2}/>
                 <Text style={styles.text2}>TABLA DE GOLEO</Text>
                 <Icon name="chevron-right" style={styles.icon2}/>
@@ -67,7 +67,7 @@ export default class Menu extends React.Component {
 
           <View>
             <TouchableHighlight>
-              <Button style={styles.Button3} onPress={() => navigation.push('Market')}>
+              <Button style={styles.Button3} onPress={() => this.props.navigation.push('MarketSudamericana')}>
                 <Icon name="dollar" style={styles.icon}/>
                 <Text style={styles.text}>MERCADO DE EQUIPOS</Text>
                 <Icon name="chevron-right" style={styles.icon}/>
@@ -141,5 +141,8 @@ const styles = StyleSheet.create({
   },
   view: {
     padding: 20
+  },
+  remove: {
+    marginLeft: 15
   }
 });

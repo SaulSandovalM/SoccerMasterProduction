@@ -1,30 +1,17 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableWithoutFeedback} from 'react-native';
 import {Container, Content} from 'native-base';
-import Header from '../../comun/Header';
-import SideMenu from 'react-native-side-menu';
-import Menu from '../../comun/Menu';
 import ListComponent from './ListComponent';
 import * as firebase from 'firebase';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class PartidosOro extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isOpen: false,
       nuevo: '',
       lista: []
     }
-  }
-
-  toggle(){
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
-  }
-
-  updateMenu(isOpen){
-    this.setState({isOpen})
   }
 
   static navigationOptions = {
@@ -57,24 +44,30 @@ export default class PartidosOro extends Component {
   render() {
     return (
       <Container style={styles.container}>
-        <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
-          <Header toggle={this.toggle.bind(this)}/>
-            <Content style={styles.container}>
-              <View style={styles.container}>
-                <Text style={styles.jordana}>JORNADA</Text>
-                <Text style={styles.fecha}>FECHA</Text>
-              </View>
+        <View style={styles.menuContainer}>
+          <TouchableWithoutFeedback onPress={() => this.props.navigation.push('MenuOro')}>
+            <Icon name="bars" color="white" size={25} />
+          </TouchableWithoutFeedback>
+          <Image style={styles.logo} source={require('../../../assets/imgs/Soccer.png')}/>
+          <TouchableWithoutFeedback>
+            <Icon name="search" color="black" size={25} />
+          </TouchableWithoutFeedback>
+        </View>
+          <Content style={styles.container}>
+            <View style={styles.container}>
+              <Text style={styles.jordana}>JORNADA</Text>
+              <Text style={styles.fecha}>FECHA</Text>
+            </View>
 
-              <View style={styles.container}>
+            <View style={styles.container}>
 
-                <ListComponent
-                  lista={this.state.lista}
-                  changeDone={this.changeDone}
-                />
+              <ListComponent
+                lista={this.state.lista}
+                changeDone={this.changeDone}
+              />
 
-              </View>
-            </Content>
-          </SideMenu>
+            </View>
+          </Content>
         </Container>
       );
     }
@@ -84,8 +77,17 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'black',
   },
-  header: {
-    marginTop: 24
+  menuContainer: {
+    flexDirection: 'row',
+    height: 60,
+    alignItems: 'center',
+    justifyContent:'space-between',
+    backgroundColor: 'black',
+    paddingHorizontal: 15
+  },
+  logo: {
+    width: 120,
+    height: 40
   },
   fecha: {
     color: 'grey',

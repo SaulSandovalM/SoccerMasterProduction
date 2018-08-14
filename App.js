@@ -52,6 +52,15 @@ import MarketPersonalRey from './src/components/market/MarketPersonalRey';
 import MarketPersonalSudamericana from './src/components/market/MarketPersonalSudamericana';
 import Thrashed from './src/components/thrashed/Thrashed';
 import Menu from './src/components/comun/Menu';
+import MenuRey from './src/components/comun/MenuRey';
+import MenuAfricana from './src/components/comun/MenuAfricana';
+import MenuAmerica from './src/components/comun/MenuAmerica';
+import MenuArgentina from './src/components/comun/MenuArgentina';
+import MenuLibertadores from './src/components/comun/MenuLibertadores';
+import MenuFemenil from './src/components/comun/MenuFemenil';
+import MenuConfederaciones from './src/components/comun/MenuConfederaciones';
+import MenuOro from './src/components/comun/MenuOro';
+import MenuSudamericana from './src/components/comun/MenuSudamericana';
 import Index from './src/components/login/Index';
 import PartidosJugador from './src/components/matches/PartidosJugador/PartidosJugador';
 import Profile from './src/components/profile/Profile';
@@ -63,6 +72,15 @@ const Routes = createStackNavigator({
   Copas: Copas,
   Index: Index,
   Menu: Menu,
+  MenuRey: MenuRey,
+  MenuAfricana: MenuAfricana,
+  MenuAmerica: MenuAmerica,
+  MenuArgentina: MenuArgentina,
+  MenuConfederaciones: MenuConfederaciones,
+  MenuFemenil: MenuFemenil,
+  MenuLibertadores: MenuLibertadores,
+  MenuOro: MenuOro,
+  MenuSudamericana: MenuSudamericana,
   TeamAfricana: TeamAfricana,
   PartidosRey: PartidosRey,
   StadisticsAfricana: StadisticsAfricana,

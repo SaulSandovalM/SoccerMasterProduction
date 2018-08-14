@@ -17,7 +17,7 @@ export default class MarketPersonalFemenil extends Component {
 
           <Header>
             <Left>
-              <Button transparent>
+              <Button transparent onPress={() => this.props.navigation.goBack()}>
                 <Icon name='chevron-left' style={styles.icon}/>
               </Button>
             </Left>

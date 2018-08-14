@@ -17,7 +17,7 @@ export default class TeamOro extends Component {
   }
 
   componentDidMount() {
-    const itemsRef = firebase.database().ref('CopaOroa/Equipos');
+    const itemsRef = firebase.database().ref('CopaOro/Equipos');
     this.listenForItems(itemsRef);
   }
 

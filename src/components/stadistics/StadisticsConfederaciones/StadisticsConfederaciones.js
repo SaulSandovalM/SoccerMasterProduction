@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableWithoutFeedback} from 'react-native';
 import {Container, Content} from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Header from '../../comun/Header';
-import SideMenu from 'react-native-side-menu';
-import Menu from '../../comun/Menu';
-import Soccer from '../../../assets/imgs/Soccer.png';
 import ListComponent from './ListComponent';
 import * as firebase from 'firebase';
 
@@ -13,7 +9,6 @@ export default class StadisticsConfederaciones extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isOpen: false,
       nuevo: '',
       lista: []
     }
@@ -59,8 +54,15 @@ export default class StadisticsConfederaciones extends Component {
   render() {
     return (
       <Container style={styles.container}>
-        <SideMenu menu={<Menu/>} isOpen={this.state.isOpen} onChange={(isOpen) => this.updateMenu(isOpen)}>
-        <Header toggle={this.toggle.bind(this)}/>
+        <View style={styles.menuContainer}>
+          <TouchableWithoutFeedback onPress={() => this.props.navigation.push('MenuConfederaciones')}>
+            <Icon name="bars" color="white" size={25} />
+          </TouchableWithoutFeedback>
+          <Image style={styles.logo} source={require('../../../assets/imgs/Soccer.png')}/>
+          <TouchableWithoutFeedback>
+            <Icon name="search" color="black" size={25} />
+          </TouchableWithoutFeedback>
+        </View>
         <Content style={styles.container}>
           <View style={styles.margin}>
 
@@ -71,7 +73,6 @@ export default class StadisticsConfederaciones extends Component {
 
           </View>
         </Content>
-        </SideMenu>
       </Container>
     );
   }
@@ -83,5 +84,17 @@ const styles = StyleSheet.create({
   },
   margin: {
     marginTop: 30
-  }
+  },
+  menuContainer: {
+    flexDirection: 'row',
+    height: 60,
+    alignItems: 'center',
+    justifyContent:'space-between',
+    backgroundColor: 'black',
+    paddingHorizontal: 15
+  },
+  logo: {
+    width: 120,
+    height: 40
+  },
 });
