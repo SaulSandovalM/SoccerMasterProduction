@@ -6,6 +6,37 @@ export default class Profile extends Component {
       title: "Perfil"
     };
 
+    constructor(props){
+      super(props)
+      this.state = {
+        nuevo: '',
+        lista: []
+      }
+    }
+
+    componentDidMount() {
+      const itemsRef = firebase.database().ref('CopaAmericana/Jornada1/Partidos');
+      this.listenForItems(itemsRef);
+    }
+
+    listenForItems = (itemsRef) => {
+      itemsRef.on('value', (snap) => {
+        var lista = [];
+        snap.forEach((child) => {
+          lista.push({
+            equipo1: child.val().equipo1,
+            equipo2: child.val().equipo2,
+            goles1: child.val().goles1,
+            goles2: child.val().goles2,
+            id: child.key
+          });
+        });
+        this.setState({
+          lista: lista
+        });
+      });
+    };
+
     render() {
       return (
         <View style={styles.container}>

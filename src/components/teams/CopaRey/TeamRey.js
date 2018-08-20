@@ -16,6 +16,13 @@ export default class TeamRey extends Component {
     }
   }
 
+  press() {
+    if (this.state.styleIndex === 0) {
+      this.setState({styleIndex: 1})
+    } else {
+      this.setState({styleIndex: 0}) }
+  }
+
   componentDidMount() {
     const itemsRef = firebase.database().ref('CopaRey/Equipos');
     this.listenForItems(itemsRef);
@@ -47,16 +54,14 @@ export default class TeamRey extends Component {
         <ScrollView>
           <View style={styles.view}>
             <ListComponent
-                lista={this.state.lista}
-                changeDone={this.changeDone}
+              lista={this.state.lista}
+              changeDone={this.changeDone}
             />
           </View>
-
-          <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.navigation.push('PartidosRey')}>
-            <Text style={styles.buttonText}>Continuar</Text>
-          </TouchableHighlight>
-
         </ScrollView>
+        <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.navigation.push('PartidosRey')}>
+          <Text style={styles.buttonText}>Continuar</Text>
+        </TouchableHighlight>
       </View>
     );
   }

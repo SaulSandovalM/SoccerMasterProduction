@@ -51,12 +51,10 @@ export default class TeamAmerica extends Component {
                 changeDone={this.changeDone}
             />
           </View>
-
-          <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.navigation.push('PartidosAmerica')}>
-            <Text style={styles.buttonText}>Continuar</Text>
-          </TouchableHighlight>
-
         </ScrollView>
+        <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.navigation.push('PartidosAmerica')}>
+          <Text style={styles.buttonText}>Continuar</Text>
+        </TouchableHighlight>
       </View>
     );
   }
