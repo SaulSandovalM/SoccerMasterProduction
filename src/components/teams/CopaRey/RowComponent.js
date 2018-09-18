@@ -20,7 +20,7 @@ export default class RowComponent extends Component {
   render() {
     return (
       <TouchableHighlight style={styles.touch} onPress={this.press.bind(this)}>
-        <Text style={styles.text}>{this.props.item.nombre}</Text>
+        <Text style={styles.text}>{this.props.item.equiponame}</Text>
       </TouchableHighlight>
     );
   }

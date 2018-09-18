@@ -24,8 +24,11 @@ export default class TeamRey extends Component {
   }
 
   componentDidMount() {
-    const itemsRef = firebase.database().ref('CopaRey/Equipos');
+    let key;
+    key = itemsRef.id;
+    const itemsRef = firebase.database().ref(`CopaRey/equipos/teamsRey/${key}`);
     this.listenForItems(itemsRef);
+    console.log(key)
   }
 
   listenForItems = (itemsRef) => {
@@ -33,7 +36,7 @@ export default class TeamRey extends Component {
       var lista = [];
       snap.forEach((child) => {
         lista.push({
-          nombre: child.val().nombre,
+          equiponame: child.val().equiponame,
           id: child.key
         });
       });

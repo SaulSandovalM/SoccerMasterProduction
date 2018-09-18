@@ -53,6 +53,13 @@ export default class StadisticsAfricana extends Component {
             <Icon name="search" color="black" size={25} />
           </TouchableWithoutFeedback>
         </View>
+        <View style={styles.view0}>
+          <Text style={styles.text}> - </Text>
+          <Text style={styles.text}>PJ</Text>
+          <Text style={styles.text}>PG</Text>
+          <Text style={styles.text}>PP</Text>
+          <Text style={styles.text}>PTS</Text>
+        </View>
         <Content style={styles.container}>
           <View style={styles.margin}>
 
@@ -87,4 +94,12 @@ const styles = StyleSheet.create({
     width: 120,
     height: 40
   },
+  view0: {
+    backgroundColor: 'grey'
+  },
+  text: {
+    fontSize: 18,
+    color: 'black',
+    margin: 5
+  }
 });

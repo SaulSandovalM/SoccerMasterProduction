@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView, Image, ImageBackground} from 'react-native';
+import firebase from '../firebase/firebase';
 
 export default class Profile extends Component {
     static navigationOptions = {

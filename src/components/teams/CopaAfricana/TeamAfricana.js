@@ -17,7 +17,9 @@ export default class TeamAfricana extends Component {
   }
 
   componentDidMount() {
-    const itemsRef = firebase.database().ref('CopaAfricana/Equipos');
+    let updates = {};
+    let key;
+    const itemsRef = firebase.database().update[`CopaAfricana/${key}/names`];
     this.listenForItems(itemsRef);
   }
 
